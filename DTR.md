@@ -1,20 +1,25 @@
 ### Template for DTR Memo
 
-Project: 
+Project: Viewing_party
 
-Group Member Names:
+Group Member Names: Max Ribbans, Alex Osborne, James Fox-Collis
 
-Goals and Expectations for the Project (What does each group member hope to get out of this project? What do we want to achieve as a team? How will we know that we're successful?):
+Goals and Expectations for the Project (What does each group member hope to get out of this project? What do we want to achieve as a team? How will we know that we're successful?): 
+`Know we're successful when we know we want to keep working on the project, when we find ourselves in a good healthy work environment.  As a team we hope to achieve atleast 1 well implemented exploration.`
 	
 Team strengths & collaboration styles (consider discussing your Pairin qualities here):
+`Flexible schedules, agreed upon time constraints and desire to work as a team, and when able to go forward working solo.`
 
 How we can use our strengths to overcome obstacles:
 
 Schedule Expectations (When are we available to work together and individually? What constraints do we have? Make sure to discuss the remote questions above in regards to this section):
+`Expect to have Saturday as blackout date, mornings to not work on project, and work times around dinner.  Cut off time 8:30 pm.`
 
 Communication Expectations (How and often will we communicate? How do we keep lines of communication open? How will we make decisions as a team? How will we communicate about our emotional and mental well-being with each other?):
+`Continued communication through slack.`
 
 Abilities & Growth Expectations (Technical strengths and areas for desired improvement):
+`Definitely want to improve in terms of API consumption.`
 
 Workload Expectations (What features do we each want to work on?):
 
