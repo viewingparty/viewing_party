@@ -22,18 +22,25 @@ Abilities & Growth Expectations (Technical strengths and areas for desired impro
 `Definitely want to improve in terms of API consumption.`
 
 Workload Expectations (What features do we each want to work on?):
+`TBD`
 
 Workflow Expectations (Git workflow/Tools/Code Review/Reviewing Pull Requests/Debugging and Problem-solving Techniques): 
 
 Pomodoro Break Schedule:
+`Every 30-55 min depending on what we are tackling.`
 
 Expectations for giving and receiving feedback:
+`Specific, Actionable, and Kind.  Be open too, if I(we) are doing something that bothers you, lets communicate to work effectively as a team.`
+
 
 Additional Remote Considerations:
+`Ice Cream Sundays`
 
 Project management tools we will use (GitHub projects or Trello are popular tools):
+`Utilizing a Github Project Board.`
 
 Day 1 Agenda: 
+`Individual Project Review.`
 
 Additional Notes:
 
