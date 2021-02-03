@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :email, presence: :email
+  
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
   has_many :parties, dependent: :destroy
