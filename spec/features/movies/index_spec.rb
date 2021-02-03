@@ -11,5 +11,12 @@ describe 'as an authenticated user' do
 
             expect("CBS Playhouse").to appear_before("Kallagan")
         end
+
+        it 'has the top rated and search options still' do
+            visit movies_path
+
+            expect(page).to have_button("Top Rated Movies")
+            expect(page).to have_button("Find Movies")
+        end
     end
 end
