@@ -17,10 +17,13 @@ gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'shoulda-matchers'
+gem 'faraday'
+gem 'figaro'
 
 group :development, :test do
   gem 'pry'
   gem 'travis'
+  gem 'hirb'
 end
 
 group :development do

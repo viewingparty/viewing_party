@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :discover, only: [:index]
+  get '/search', to: "search#index", as: "search"
+  resources :movies, only: [:index, :show]
+
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
