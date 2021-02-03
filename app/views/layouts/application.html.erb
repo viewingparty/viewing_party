@@ -11,12 +11,6 @@
   <body>
     <main>
     <%# assess this later? %>
-      <% if notice %>
-       <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
       <%=  button_to "Log Out", destroy_user_session_path, method: :delete %>
       <%= yield %>
     </main>
