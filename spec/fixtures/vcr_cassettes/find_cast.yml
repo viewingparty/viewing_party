@@ -24,8 +24,6 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Wed, 03 Feb 2021 16:48:06 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -35,8 +33,6 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -45,10 +41,14 @@ http_interactions:
       - '9579'
       X-Memc-Expires:
       - '12021'
-      Etag:
-      - W/"9a0fcadb67678d897bf384d59e554860"
       Last-Modified:
       - Wed, 03 Feb 2021 16:48:06 GMT
+      Date:
+      - Wed, 03 Feb 2021 23:11:21 GMT
+      Cache-Control:
+      - public, max-age=21600
+      Etag:
+      - W/"9a0fcadb67678d897bf384d59e554860"
       Vary:
       - Accept-Encoding
       X-Cache:
@@ -58,9 +58,9 @@ http_interactions:
       X-Amz-Cf-Pop:
       - PHX50-C2
       X-Amz-Cf-Id:
-      - P-0FrmaHyzThTEoKcEfeH-r50ggXKsn2qJo7ie_9HN4OUOyv7f19jQ==
+      - Mn1jQB9NL-RRz8kRu6W3UKdMLQhBzfFamTPagTLT21fayybZgjjOmA==
       Age:
-      - '20717'
+      - '1'
     body:
       encoding: ASCII-8BIT
       string: '{"id":792897,"cast":[{"adult":false,"gender":2,"id":83908,"known_for_department":"Acting","name":"Daniel
@@ -81,5 +81,5 @@ http_interactions:
         Mandel","original_name":"Loring Mandel","popularity":1.62,"profile_path":null,"credit_id":"6019a590a76ac5003f537585","department":"Writing","job":"Writer"},{"adult":false,"gender":1,"id":1186923,"known_for_department":"Art","name":"Jan
         Scott","original_name":"Jan Scott","popularity":0.6,"profile_path":null,"credit_id":"6019a5a4bc86570045ba6b34","department":"Art","job":"Art
         Direction"}]}'
-  recorded_at: Wed, 03 Feb 2021 22:33:23 GMT
+  recorded_at: Wed, 03 Feb 2021 23:11:22 GMT
 recorded_with: VCR 6.0.0
