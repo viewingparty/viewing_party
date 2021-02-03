@@ -18,7 +18,7 @@ RSpec.describe "Making a new Party" do
       fill_in :user_email, with: host.email
       fill_in 'user[password]', with: host.password
 
-      click_button login
+      click_button "Log in"
 
       visit new_party_path(host)
 
