@@ -21,9 +21,18 @@ gem 'faraday'
 gem 'figaro'
 
 group :development, :test do
-  gem 'pry'
   gem 'travis'
-  gem 'hirb'
+  gem "pry"
+  gem "rspec-rails", "~> 4.0.1"
+  gem "capybara", github: "DocSpring/capybara", branch: :crash_on_deprecations
+  gem "launchy"
+  gem "simplecov"
+  gem "shoulda-matchers"
+  gem "orderly"
+  gem "rails-erd"
+  gem "awesome_print", :require => "ap"
+  gem "hirb"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -34,10 +43,8 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'simplecov'
+  gem "webmock"
+  gem "vcr"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
