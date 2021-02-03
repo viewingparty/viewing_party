@@ -1,4 +1,4 @@
-class MovieData
+class Film
     attr_reader :title,
                 :original_title,
                 :api_id,

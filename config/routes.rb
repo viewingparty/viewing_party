@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :discover, only: [:index]
-  get '/search', to: "search#index", as: "search"
   resources :movies, only: [:index, :show]
 
   
