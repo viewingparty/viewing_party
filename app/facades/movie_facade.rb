@@ -10,6 +10,11 @@ class MovieFacade
       end
     end
 
+    def find_movie(id)
+        data = TheMovieDbApiService.find_movie(id)
+        Film.new(data)
+    end
+
 
     def movies(data)
         data[:results].map do |result|

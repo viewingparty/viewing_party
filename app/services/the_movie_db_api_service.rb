@@ -9,7 +9,12 @@ class TheMovieDbApiService
             response = conn.get("/3/search/movie?language=en-US&query=#{arg}")
             results = parse(response)
         end
-        
+
+        def find_movie(id)
+            response = conn.get("/3/movie/#{id}")
+            response = parse(response)
+        end
+
     private
 
     def parse(arg)
@@ -21,5 +26,5 @@ class TheMovieDbApiService
             faraday.params['api_key'] = ENV['api_key']
         end
     end
-end
+  end
 end
