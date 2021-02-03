@@ -6,13 +6,15 @@ RSpec.describe "Logging in" do
 
     visit root_path
 
-    click_button "Log In"
+    login = "Log in"
+
+    click_button login
 
     fill_in :user_email, with: user.email
-    fill_in :user_password, with: user.password
+    fill_in 'user[password]', with: user.password
 
-    save_and_open_page
-    # click_button "Log In"
+    click_button login
 
+    expect(current_path).to eq(user_dashboard_path(user))
   end
 end
