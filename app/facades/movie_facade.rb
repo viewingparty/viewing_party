@@ -11,8 +11,10 @@ class MovieFacade
     end
 
     def find_movie(id)
-        data = TheMovieDbApiService.find_movie(id)
-        Film.new(data)
+        movie = TheMovieDbApiService.find_movie(id)
+        cast = TheMovieDbApiService.find_cast(id)[:cast]
+        reviews = TheMovieDbApiService.find_reviews(id)[:results]
+        Film.new(movie, cast, reviews)
     end
 
 

@@ -15,6 +15,15 @@ class TheMovieDbApiService
             response = parse(response)
         end
 
+        def find_cast(id)
+            response = conn.get("/3/movie/#{id}/credits")
+            response = parse(response)
+        end
+
+        def find_reviews(id)
+            response = conn.get("/3/movie/#{id}/reviews")
+            response = parse(response)
+        end
     private
 
     def parse(arg)

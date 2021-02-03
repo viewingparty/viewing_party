@@ -1,2 +1,16 @@
 <%= @movie.title %><br><br>
+<%= @movie.vote_average %><br>
+<%= @movie.runtime %><br>
 <%= @movie.overview %>
+<%= @movie.reviews.count %><br>
+<% @movie.genres.each do |genre| %>
+    <%= genre[:name] %>
+<% end %><br><br>
+<% @movie.reviews.each do |review| %>
+    <%= review[:author] %>
+    <%= review[:content] %>
+<% end %><br>
+<% @movie.cast.each do |member| %>
+    name: <%= member[:name] %> ---
+    character: <%= member[:character] %><br>
+<% end %>
