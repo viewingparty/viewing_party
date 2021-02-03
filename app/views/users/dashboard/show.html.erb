@@ -6,3 +6,9 @@
     <%=  friend.email%>
   <% end %>
 </section>
+<section>
+  <%= "Viewing Parties" %>
+  <% current_user.parties.each do |party| %>
+    <%=  party.movie.title%>
+  <% end %>
+</section>
