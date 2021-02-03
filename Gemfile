@@ -16,17 +16,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'shoulda-matchers'
 gem 'faraday'
 gem 'figaro'
 
 group :development, :test do
   gem 'travis'
   gem "pry"
-  gem "rspec-rails", "~> 4.0.1"
-  gem "capybara", github: "DocSpring/capybara", branch: :crash_on_deprecations
-  gem "launchy"
-  gem "simplecov"
   gem "shoulda-matchers"
   gem "orderly"
   gem "rails-erd"
@@ -39,10 +34,13 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop-rails'
-  gem 'travis'
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'simplecov'
   gem "webmock"
   gem "vcr"
 end
