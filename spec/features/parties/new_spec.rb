@@ -16,16 +16,22 @@ RSpec.describe "Making a new Party" do
       friend = User.create(email: 'friend@example.com', password: 'hunter2')
       stranger = User.create(email: 'stranger@example.com', password: 'hunter2')
 
+
       visit root_path
       click_button "Log in"
       fill_in :user_email, with: host.email
       fill_in 'user[password]', with: host.password
       click_button "Log in"
       click_on "Discover Movies"
-      fill_in 'query', with: "Old Boy"
+      fill_in 'query', with: "The Departed"
       click_on "Find Movies"
-      save_and_open_page
-      # binding.pry
+      click_on "The Departed"
+      click_on "Create A Party"
+      
+      expect(current_path).to eq(new_party_path)
+      
+      click_on "Create Party"
+      expect(current_path).to eq(user_dashboard_path(host))
     end
   end
 
