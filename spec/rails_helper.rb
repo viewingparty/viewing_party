@@ -12,7 +12,6 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
   config.allow_http_connections_when_no_cassette = true
 end
-
 require 'webmock/rspec'
 # WebMock.disable_net_connect!(allow_localhost: true)
 # config.allow_http_connections_when_no_cassette = true

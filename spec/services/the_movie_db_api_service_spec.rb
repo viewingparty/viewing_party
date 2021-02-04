@@ -4,7 +4,7 @@ describe TheMovieDbApiService do
   it 'can find top rated movies' do
     VCR.use_cassette("movies_index") do
       top = TheMovieDbApiService.top_rated_movies
-      expect(top[:results].first[:title]).to eq("Looks Like it Was Yesterday.")
+      expect(top.first[:title]).to eq("Le Temps Passe")
     end
   end
 
@@ -13,6 +13,23 @@ describe TheMovieDbApiService do
       find = TheMovieDbApiService.find_by_title("Mad Max")
 
       expect(find[:results].first[:title]).to eq("Mad Max: Fury Road")
+    end
+  end
+
+  it 'can collect genres' do
+    VCR.use_cassette("genre_collection") do
+      find = TheMovieDbApiService.movie_genre_select
+
+      expect(find).to be_a(Hash)
+      expect(find[:genres].first[:name]).to eq("Action")
+    end
+  end
+
+  it 'can search by genre' do
+    VCR.use_cassette("search_by_genre") do
+      collection = TheMovieDbApiService.movies_by_genre("Action")
+
+      expect(collection).to be_a(Hash)
     end
   end
 

@@ -2,13 +2,12 @@ require 'rails_helper'
 
 describe 'as an authenticated user' do
     describe 'when I visit the index page' do
-        # before :each do
-        #     VCR.insert_cassette("movies_index") 
-        # end
+      before :each do
+        @user = User.create(email: "admin@example.com", password: "password")
 
-        # after :each do
-        #     VCR.eject_cassette
-        # end
+        login_as(@user)
+      end
+
         it 'can show me the top rated movies' do
           VCR.use_cassette("movies_index") do
             visit discover_index_path

@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 describe 'When I visit the discover index' do
+  before :each do
+    @user = User.create(email: "admin@example.com", password: "password")
+
+    login_as(@user)
+  end
     it 'can have a link to the top 40 movies' do
       VCR.use_cassette("movies_index") do
         visit discover_index_path
