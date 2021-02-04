@@ -14,7 +14,7 @@ describe Film do
             overview: "overview",
             genres: "genres"
          }
-        cast = "Big"
+        cast = ["Big"]
         reviews = "Lots"
 
         film = Film.new(data, cast, reviews)
