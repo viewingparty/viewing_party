@@ -6,6 +6,21 @@ class TheMovieDbApiService
             [parse(response1)[:results], parse(response2)[:results]].flatten
         end
 
+        def top_rated_tv_shows
+          response = faraday.get("/3/discover/tv?sort_by=vote_average.desc")
+          parse(response)
+        end
+
+        def  movie_genre_select
+          response = faraday.get("/3/genre/movie/list")
+          parse(response)
+        end
+
+        def movies_by_genre(arg)
+          response = faraday.get("/3/discover/movie?genre=#{arg}")
+          results = parse(response)
+        end
+
         def find_by_title(arg)
           response = faraday.get("/3/search/movie?certification_country=US&language=en-US&query=#{arg}")
           results = parse(response)
@@ -32,7 +47,7 @@ class TheMovieDbApiService
     end
 
     def faraday
-      Faraday.new("https://api.themoviedb.org") do |faraday|
+      conn = Faraday.new("https://api.themoviedb.org") do |faraday|
         faraday.params['api_key'] = ENV['movie_api']
       end
     end

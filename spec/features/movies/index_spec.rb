@@ -7,7 +7,7 @@ describe 'as an authenticated user' do
 
         login_as(@user)
       end
-      
+
         it 'can show me the top rated movies' do
           VCR.use_cassette("movies_index") do
             visit discover_index_path

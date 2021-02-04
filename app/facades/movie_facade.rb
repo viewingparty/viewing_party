@@ -7,6 +7,16 @@ class MovieFacade
       elsif params[:top_rated].present?
         data = TheMovieDbApiService.top_rated_movies
         movies(data)
+      elsif params[:genre].present?
+        data = TheMovieDbApiService.movies_by_genre(params[:genre])[:results]
+        movies(data)
+      end
+    end
+
+    def genres
+      data = TheMovieDbApiService.movie_genre_select[:genres]
+      data.map do |genre|
+        Genre.new(genre)
       end
     end
 
