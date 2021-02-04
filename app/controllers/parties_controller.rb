@@ -10,7 +10,6 @@ class PartiesController < ActionController::Base
   end
 
   private
-
   def party_params
     params.require(:party).permit(:title, :duration, :movie_id)
   end
