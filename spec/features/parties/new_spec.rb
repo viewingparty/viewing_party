@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe "Making a new Party" do
   describe "It shows movie title and duration" do
     # Fill once API is up and running
-    before(:each) do
-      VCR.insert_cassette("find_movie")
-    end
+    # before(:each) do
+    #   VCR.insert_cassette("find_movie")
+    # end
 
-    after(:each) do
-      VCR.eject_cassette("find_movie")
-    end
+    # after(:each) do
+    #   VCR.eject_cassette("find_movie")
+    # end
 
     it "Shows uneditable title" do
       host = User.create(email: 'host@example.com', password: 'hunter2')
@@ -17,15 +17,15 @@ RSpec.describe "Making a new Party" do
       stranger = User.create(email: 'stranger@example.com', password: 'hunter2')
 
       visit root_path
-
       click_button "Log in"
-
       fill_in :user_email, with: host.email
       fill_in 'user[password]', with: host.password
-
       click_button "Log in"
-      visit movie_path("CBS Playhouse: Shadow Game")
-      binding.pry
+      click_on "Discover Movies"
+      fill_in 'query', with: "Old Boy"
+      click_on "Find Movies"
+      save_and_open_page
+      # binding.pry
     end
   end
 
