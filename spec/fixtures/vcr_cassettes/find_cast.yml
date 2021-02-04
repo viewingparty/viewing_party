@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/792897/credits?api_key=44887bea2881cacd3e7aa9c9a1e39222
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 04 Feb 2021 05:30:11 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - c43a42d6262f68d11d543117a84f602171a5f36b
+      X-Memc-Age:
+      - '8833'
+      X-Memc-Expires:
+      - '12767'
+      Etag:
+      - W/"e049c3405e7070d3c2453286e3641ac4"
+      Last-Modified:
+      - Thu, 04 Feb 2021 05:30:11 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 aec08f96e3f8203b96119fd8dcddcda7.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - PHX50-C2
+      X-Amz-Cf-Id:
+      - TFCrpIbBrpmSK--UIG3Z1QU47GzomzguZcF62jd2iaZweh0pFDuWCg==
+      Age:
+      - '45'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":792897,"cast":[{"adult":false,"gender":2,"id":83908,"known_for_department":"Acting","name":"Daniel
+        Massey","original_name":"Daniel Massey","popularity":0.6,"profile_path":"/90WXpS4JNSRhStrZN5vdBHCIvlW.jpg","cast_id":6,"character":"","credit_id":"6019a50bd96c3c003e176f4c","order":0},{"adult":false,"gender":2,"id":1748,"known_for_department":"Acting","name":"William
+        Shatner","original_name":"William Shatner","popularity":5.219,"profile_path":"/7lsjbNFMGj3kYYWoMk1LNnl4p5P.jpg","cast_id":3,"character":"","credit_id":"6019a4ebbb1057003d992f44","order":1},{"adult":false,"gender":2,"id":8499,"known_for_department":"Acting","name":"William
+        Windom","original_name":"William Windom","popularity":1.06,"profile_path":"/jLKGf2gQR4cBDnUWFOsXY2y5Pui.jpg","cast_id":2,"character":"","credit_id":"6019a4e3b02f5e004052ac41","order":2},{"adult":false,"gender":1,"id":1215918,"known_for_department":"Acting","name":"Carol
+        Eve Rossen","original_name":"Carol Eve Rossen","popularity":2.331,"profile_path":"/2UnY5gX7FOqF0721sN4zfGI1fp1.jpg","cast_id":9,"character":"","credit_id":"6019a52fbc86570045ba6ab6","order":3},{"adult":false,"gender":1,"id":21010,"known_for_department":"Acting","name":"Alexandra
+        Hay","original_name":"Alexandra Hay","popularity":2.192,"profile_path":"/eCopXvug3rgVeyM6TIpflPQxZlQ.jpg","cast_id":1,"character":"Gayle","credit_id":"6019a4daa76ac5003e5370c6","order":4},{"adult":false,"gender":1,"id":45863,"known_for_department":"Acting","name":"Doris
+        Roberts","original_name":"Doris Roberts","popularity":1.574,"profile_path":"/4I5ahM7d12LfIvETzANvXAstp1Z.jpg","cast_id":8,"character":"","credit_id":"6019a52387a27a0045e5d765","order":5},{"adult":false,"gender":1,"id":129550,"known_for_department":"Acting","name":"Norma
+        Crane","original_name":"Norma Crane","popularity":1.635,"profile_path":"/udldU8UL1lVvKQodSWi2z7OcuiL.jpg","cast_id":4,"character":"","credit_id":"6019a4f6976a23003ea7efb8","order":6},{"adult":false,"gender":1,"id":1185405,"known_for_department":"Acting","name":"Maria
+        Tucci","original_name":"Maria Tucci","popularity":0.6,"profile_path":null,"cast_id":10,"character":"","credit_id":"6019a53ab02f5e003e534026","order":7},{"adult":false,"gender":2,"id":15413,"known_for_department":"Acting","name":"Richard
+        Dysart","original_name":"Richard Dysart","popularity":1.274,"profile_path":"/lmjA0ecxTxjZ4j9R7DKNq97Ffil.jpg","cast_id":5,"character":"","credit_id":"6019a4ff1b70ae003e678d18","order":8},{"adult":false,"gender":1,"id":83825,"known_for_department":"Acting","name":"Jane
+        Elliot","original_name":"Jane Elliot","popularity":0.6,"profile_path":null,"cast_id":16,"character":"","credit_id":"6019a8d5470ead004171e21b","order":9},{"adult":false,"gender":2,"id":151529,"known_for_department":"Acting","name":"Jason
+        Wingreen","original_name":"Jason Wingreen","popularity":0.84,"profile_path":"/4VlKKV47yNJgV1rF27h2PKrJDqd.jpg","cast_id":11,"character":"","credit_id":"6019a548a76ac5003c5370bb","order":10},{"adult":false,"gender":2,"id":1211977,"known_for_department":"Acting","name":"Greg
+        Mullavey","original_name":"Greg Mullavey","popularity":1.4,"profile_path":null,"cast_id":7,"character":"","credit_id":"6019a516fb3f61003fc95ebb","order":11}],"crew":[{"adult":false,"gender":2,"id":8422,"known_for_department":"Sound","name":"David
+        Shire","original_name":"David Shire","popularity":0.694,"profile_path":"/oJVNrHE7q0ztCf7Wi03IGPk3cUD.jpg","credit_id":"6019a5731b70ae003f65b8fa","department":"Sound","job":"Music"},{"adult":false,"gender":2,"id":55146,"known_for_department":"Directing","name":"Paul
+        Bogart","original_name":"Paul Bogart","popularity":0.991,"profile_path":null,"credit_id":"6019a583976a23003caa510e","department":"Directing","job":"Director"},{"adult":false,"gender":0,"id":136001,"known_for_department":"Writing","name":"Loring
+        Mandel","original_name":"Loring Mandel","popularity":0.972,"profile_path":null,"credit_id":"6019a590a76ac5003f537585","department":"Writing","job":"Writer"},{"adult":false,"gender":1,"id":1186923,"known_for_department":"Art","name":"Jan
+        Scott","original_name":"Jan Scott","popularity":0.6,"profile_path":null,"credit_id":"6019a5a4bc86570045ba6b34","department":"Art","job":"Art
+        Direction"}]}'
+  recorded_at: Thu, 04 Feb 2021 05:30:56 GMT
+recorded_with: VCR 6.0.0

@@ -16,18 +16,24 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'shoulda-matchers'
+gem 'faraday'
+gem 'figaro'
 
 group :development, :test do
-  gem 'pry'
   gem 'travis'
+  gem "pry"
+  gem "shoulda-matchers"
+  gem "orderly"
+  gem "rails-erd"
+  gem "awesome_print", :require => "ap"
+  gem "hirb"
+  gem "factory_bot_rails"
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop-rails'
-  gem 'travis'
 end
 
 group :test do
@@ -35,6 +41,8 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
+  gem "webmock"
+  gem "vcr"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

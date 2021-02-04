@@ -1,0 +1,18 @@
+<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id} %>
+
+<h3> Title: <%= @movie.title %><br></h3><br>
+<%= @movie.vote_average %><br>
+<%= @movie.runtime %><br>
+<%= @movie.overview %>
+<%= @movie.reviews.count %><br>
+<% @movie.genres.each do |genre| %>
+  <%= genre[:name] %>
+<% end %><br><br>
+<% @movie.reviews.each do |review| %>
+  <%= review[:author] %>
+  <%= review[:content] %>
+<% end %><br>
+<% @movie.cast.each do |member| %>
+  name: <%= member[:name] %> ---
+  character: <%= member[:character] %><br>
+<% end %>
