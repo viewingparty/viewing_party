@@ -2,7 +2,7 @@ class MovieFacade
   class << self
     def search_movies(params)
       if params[:query].present?
-        data = TheMovieDbApiService.find_by_title(params[:query])
+        data = TheMovieDbApiService.find_by_title(params[:query])[:results]
         movies(data)
       elsif params[:top_rated].present?
         data = TheMovieDbApiService.top_rated_movies
@@ -19,7 +19,7 @@ class MovieFacade
 
 
     def movies(data)
-        data[:results].map do |result|
+        data.map do |result|
             Film.new(result)
         end
     end
