@@ -8,7 +8,6 @@ class Film
                 :popularity,
                 :genres,
                 :runtime,
-                :cast,
                 :reviews
 
     def initialize(data, cast = "nil", reviews = "nil")
@@ -24,4 +23,15 @@ class Film
         @cast = cast
         @reviews = reviews
     end
+
+    def cast
+        x = 10
+        stars = []
+        @cast.each do |member|
+          return stars if x <= 0
+          stars << member
+          x -= 1
+        end
+    end
+
 end
