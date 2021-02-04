@@ -30,8 +30,18 @@ RSpec.describe "Making a new Party" do
       
       expect(current_path).to eq(new_party_path)
       
+
+      have_selector("input",
+                    :type => "number",
+                    :name => "party[duration]",
+                    :value => "151")
+
+      fill_in "party[duration]", with: 300
+      fill_in "party[time]", with: DateTime.current.strftime("%m%e%Y\t%l%M%p")
       click_on "Create Party"
       expect(current_path).to eq(user_dashboard_path(host))
+
+      expect(page).to have_content("The Departed")
     end
   end
 
