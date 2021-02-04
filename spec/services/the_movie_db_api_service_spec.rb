@@ -16,6 +16,23 @@ describe TheMovieDbApiService do
     end
   end
 
+  it 'can collect genres' do
+    VCR.use_cassette("genre_collection") do
+      find = TheMovieDbApiService.movie_genre_select
+
+      expect(find).to be_a(Hash)
+      expect(find[:genres].first[:name]).to eq("Action")
+    end
+  end
+
+  it 'can search by genre' do
+    VCR.use_cassette("search_by_genre") do
+      collection = TheMovieDbApiService.movies_by_genre("Action")
+
+      expect(collection).to be_a(Hash)
+    end
+  end
+
   it 'can find movie by id' do
     VCR.use_cassette("find_movie") do
       movie = TheMovieDbApiService.find_movie(792897)

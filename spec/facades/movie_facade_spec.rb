@@ -21,8 +21,18 @@ describe MovieFacade do
         VCR.use_cassette("genres_collectin") do
             genres = MovieFacade.genres
 
-            expect(genres).to be_a(Array)
+            expect(genres).to be_an(Array)
             expect(genres.first.id).to be_an(Integer)
+            expect(genres.first.name).to eq("Action")
+        end
+    end
+
+    it 'can search by genre' do
+        VCR.use_cassette("search_by_genre") do
+            params = {genre: "Action"}
+            collection = MovieFacade.search_movies(params)
+
+            expect(collection).to be_an(Array)
         end
     end
 

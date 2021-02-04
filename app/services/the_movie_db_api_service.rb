@@ -6,11 +6,6 @@ class TheMovieDbApiService
             [parse(response1)[:results], parse(response2)[:results]].flatten
         end
 
-        def top_rated_tv_shows
-          response = faraday.get("/3/discover/tv?sort_by=vote_average.desc")
-          parse(response)
-        end
-
         def  movie_genre_select
           response = faraday.get("/3/genre/movie/list")
           parse(response)
