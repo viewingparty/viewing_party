@@ -13,7 +13,7 @@
 # it.
 require 'devise'
 require 'simplecov'
-SimpleCov.start 'rails'
+SimpleCov.start
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include Warden::Test::Helpers

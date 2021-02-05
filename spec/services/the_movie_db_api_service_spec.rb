@@ -4,7 +4,7 @@ describe TheMovieDbApiService do
   it 'can find top rated movies' do
     VCR.use_cassette("movies_index") do
       top = TheMovieDbApiService.top_rated_movies
-      expect(top.first[:title]).to eq("Le Temps Passe")
+      expect(top.first[:title]).to eq("Gabriel's Inferno Part III")
     end
   end
 

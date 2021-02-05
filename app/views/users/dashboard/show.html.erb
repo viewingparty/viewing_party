@@ -1,15 +1,45 @@
 <h1> Welcome </h1>
 
 <%=  button_to "Discover Movies", discover_index_path, method: :get %>
-<section>
+<%= form_with url: user_friendships_path(current_user), method: :post, local: true do |form| %>
+  <%= form.label "Add/Invite a friend by email." %><br>
+  <%= form.text_field :friend %>
+  <%= form.submit "Add Friend" %>
+<% end %>
+
+<section class="friends">
   <%= "Friends" %>
-  <% current_user.friends.each do |friend| %>
-    <%=  friend.email%>
+  <% if current_user.no_friends? %>
+    <h3>You currently have no friends.</h3>
+  <% else %>
+    <% current_user.friends.each do |friend| %>
+      <%=  friend.email%>
+    <% end %>
   <% end %>
 </section>
-<section>
+
+<section class="friend_invites">
+  <%= "Friend Invites" %>
+  <% current_user.friend_invites.each do |frinvite| %>
+    <div id="invite-<%= frinvite.id %>">
+      <%= frinvite.user.email %>
+      <%= button_to 'Accept', user_friendships_path(current_user), params: {user: frinvite.user, status: :accepted}, method: :post %>
+      <%= button_to 'Reject', user_friendships_path(current_user), params: {friendship_id: frinvite.id, status: :rejected}, method: :patch %>
+    </div>
+  <% end %>
+</section>
+
+<section class="my_parties">
   <%= "Viewing Parties" %>
   <% current_user.parties.each do |party| %>
     <%=  party.movie.title%>
+  <% end %>
+</section>
+
+<section class="parties_im_invited_to">
+  <h3> Party Invites </h3>
+  <% current_user.guests.each do |guest| %>
+    <%= guest.movie.title %>
+    <%= guest.party.time %>
   <% end %>
 </section>

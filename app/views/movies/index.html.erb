@@ -15,6 +15,6 @@
 <% if @movies.respond_to? :each %>
     <% @movies.each do |movie| %>
         <%= link_to movie.title, movie_path(movie.api_id) %>
-        <%= movie.popularity %><br>
+        <%= movie.vote_average %><br>
     <% end %>
 <% end %>
