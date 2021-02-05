@@ -1,4 +1,10 @@
 class PartyCreator
+  attr_reader :user,
+              :movie,
+              :time,
+              :duration,
+              :guests
+  
   def initialize(data, user, movie)
     @duration = data[:duration]
     @time = data[:time]
