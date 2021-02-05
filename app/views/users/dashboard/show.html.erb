@@ -9,7 +9,7 @@
 
 <section class="friends">
   <%= "Friends" %>
-  <% if current_user.has_no_friends? %>
+  <% if current_user.no_friends? %>
     <h3>You currently have no friends.</h3>
   <% else %>
     <% current_user.friends.each do |friend| %>

@@ -21,17 +21,16 @@ class MovieFacade
     end
 
     def find_movie(id)
-        movie = TheMovieDbApiService.find_movie(id)
-        cast = TheMovieDbApiService.find_cast(id)[:cast]
-        reviews = TheMovieDbApiService.find_reviews(id)[:results]
-        Film.new(movie, cast, reviews)
+      movie = TheMovieDbApiService.find_movie(id)
+      cast = TheMovieDbApiService.find_cast(id)[:cast]
+      reviews = TheMovieDbApiService.find_reviews(id)[:results]
+      Film.new(movie, cast, reviews)
     end
 
-
     def movies(data)
-        data.map do |result|
-            Film.new(result)
-        end
+      data.map do |result|
+        Film.new(result)
+      end
     end
   end
 end

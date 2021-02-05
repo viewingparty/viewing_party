@@ -1,8 +1,7 @@
 class Users::FriendshipsController < ApplicationController
-
   def create
     invitee = User.find(params[:user])
-    if params[:status] == "accepted"
+    if params[:status] == 'accepted'
       Friendship.create(user: current_user, friend: invitee, status: :accepted)
       friendship = Friendship.find_by(user: invitee, friend: current_user)
       friendship.update(status: :accepted)
