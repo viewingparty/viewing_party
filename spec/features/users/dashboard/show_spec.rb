@@ -49,5 +49,16 @@ describe 'as an authenticated user' do
         expect(page).to have_content(@user.email)
       end
     end
+
+    it 'can reject friends' do
+      login_as(@user2)
+      visit user_dashboard_path(@user2)
+
+      within("#invite-#{@invite.id}") do
+        click_on "Reject"
+      end
+
+      expect(@user2.friends.count).to eq(0)
+    end
   end
 end

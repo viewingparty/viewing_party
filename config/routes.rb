@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users, module: :users do
     get 'dashboard', to: 'dashboard#show'
     post 'friendships', to: 'friendships#create'
+    patch 'friendships', to: 'friendships#update'
   end
 
   resources :discover, only: [:index]
