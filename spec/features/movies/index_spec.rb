@@ -15,8 +15,7 @@ describe 'as an authenticated user' do
             click_on "Top Rated Movies"
 
             expect(current_path).to eq(movies_path)
-
-            expect("CBS Playhouse").to appear_before("Kallagan")
+            expect("Wolfwalkers").to appear_before("The Godfather: Part II")
           end
         end
 

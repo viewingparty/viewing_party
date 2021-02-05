@@ -41,7 +41,7 @@ describe MovieFacade do
             params = {top_rated: true}
             movies = MovieFacade.search_movies(params)
 
-            expect(movies.first.title).to eq("Le Temps Passe")
+            expect(movies.first.title).to eq("Gabriel's Inferno Part III")
         end
     end
 end
