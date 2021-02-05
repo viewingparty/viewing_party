@@ -10,4 +10,8 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
   has_many :parties, dependent: :destroy
   has_many :guests, through: :parties
+
+  def friend_invites
+    Friendship.where(friend: self, status: :pending)
+  end
 end

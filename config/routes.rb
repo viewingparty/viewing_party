@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {sessions: "users/sessions", registrations: "users/registrations", confirmations: 'users/confirmations' }
   
   resources :users, module: :users do
-  get 'dashboard', to: 'dashboard#show'
+    get 'dashboard', to: 'dashboard#show'
+    post 'friendships', to: 'friendships#create'
   end
 
   resources :discover, only: [:index]
