@@ -1,8 +1,8 @@
 class TheMovieDbApiService 
     class << self
         def top_rated_movies
-            response1 = faraday.get("/3/discover/movie?certification_country=US&page=1&sort_by=vote_average.desc")
-            response2 = faraday.get("/3/discover/movie?certification_country=US&page=2&sort_by=vote_average.desc")
+            response1 = faraday.get("/3/movie/top_rated?certification_country=US&page=1")
+            response2 = faraday.get("/3/movie/top_rated?certification_country=US&page=2")
             [parse(response1)[:results], parse(response2)[:results]].flatten
         end
 
@@ -42,7 +42,7 @@ class TheMovieDbApiService
     end
 
     def faraday
-      conn = Faraday.new("https://api.themoviedb.org") do |faraday|
+      Faraday.new("https://api.themoviedb.org") do |faraday|
         faraday.params['api_key'] = ENV['movie_api']
       end
     end
