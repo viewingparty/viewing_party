@@ -38,6 +38,7 @@ describe 'as an authenticated user' do
       visit user_dashboard_path(@user2)
 
       within(".friends") do
+        expect(page).to have_content("You currently have no friends.")
         expect(page).to_not have_content(@user.email)
       end
       within("#invite-#{@invite.id}") do

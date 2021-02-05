@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def friend_invites
     Friendship.where(friend: self, status: :pending)
   end
+
+  def has_no_friends?
+    friends.count == 0
+  end
 end
