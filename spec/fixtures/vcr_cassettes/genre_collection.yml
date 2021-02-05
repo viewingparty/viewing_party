@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/genre/movie/list?api_key=44887bea2881cacd3e7aa9c9a1e39222
+    uri: https://api.themoviedb.org/3/genre/movie/list?api_key=HIDE_MY_DATA
     body:
       encoding: US-ASCII
       string: ''
@@ -44,7 +44,7 @@ http_interactions:
       Last-Modified:
       - Thu, 04 Feb 2021 04:49:35 GMT
       Date:
-      - Fri, 05 Feb 2021 03:24:09 GMT
+      - Fri, 05 Feb 2021 15:31:19 GMT
       Cache-Control:
       - public, max-age=21600
       Etag:
@@ -54,16 +54,16 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 dbf3cec9f1989f98e490467b50a97739.cloudfront.net (CloudFront)
+      - 1.1 c40db1af1be2facce1097f96cb9d5339.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - PHX50-C1
       X-Amz-Cf-Id:
-      - NCiPMb7q1XKKt-VHC0PwRvk0E1hfGgNgXs6Zzy8BGPUWZkPEn8nZTA==
+      - Jpxp9j4PFZ1OA1Uo_RUPjENLlGzCIcwcx52IQaJ5UAwRuIoR1jTjFQ==
       Age:
-      - '7360'
+      - '8260'
     body:
       encoding: ASCII-8BIT
       string: '{"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},{"id":10751,"name":"Family"},{"id":14,"name":"Fantasy"},{"id":36,"name":"History"},{"id":27,"name":"Horror"},{"id":10402,"name":"Music"},{"id":9648,"name":"Mystery"},{"id":10749,"name":"Romance"},{"id":878,"name":"Science
         Fiction"},{"id":10770,"name":"TV Movie"},{"id":53,"name":"Thriller"},{"id":10752,"name":"War"},{"id":37,"name":"Western"}]}'
-  recorded_at: Fri, 05 Feb 2021 05:26:49 GMT
+  recorded_at: Fri, 05 Feb 2021 17:48:59 GMT
 recorded_with: VCR 6.0.0
