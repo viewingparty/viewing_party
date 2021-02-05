@@ -9,7 +9,7 @@ class PartiesController < ApplicationController
   end
 
   def create
-    pc = PartyCreator.new(params, current_user, @movie)
+    pc = PartyCreator.new(party_params.merge(guests: params[:guests]), current_user, @movie)
     pc.make_the_party
     redirect_to user_dashboard_path(current_user)
   end

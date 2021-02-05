@@ -1,14 +1,16 @@
 class PartyCreator
   def initialize(data, user, movie)
-    @party = data[:party]
+    @duration = data[:duration]
+    @time = data[:time]
+    @guests = data[:guests]
     @user = user
     @movie = movie
   end
 
   def make_the_party
-    party = Party.create(time: @party[:time], duration: @party[:duration], user: @user, movie: @movie)
-    @party[:guests].each do |guest|
-      if guest != ''
+    party = Party.create(time: @time, duration: @duration, user: @user, movie: @movie)
+    if @guests != nil
+      @guests.each do |guest|
         friend = User.find(guest)
         Guest.create(user: friend, party: party)
       end
