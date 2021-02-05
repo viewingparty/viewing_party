@@ -8,8 +8,8 @@ class User < ApplicationRecord
   
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
+  has_many :guests
   has_many :parties, dependent: :destroy
-  has_many :guests, through: :parties
 
   def friend_invites
     Friendship.where(friend: self, status: :pending)
@@ -17,5 +17,9 @@ class User < ApplicationRecord
 
   def has_no_friends?
     friends.count == 0
+  end
+
+  def my_parties
+    parties.where(user_id: self.id)
   end
 end

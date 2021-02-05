@@ -1,9 +1,10 @@
+<%= @movie[:title] %>
 <%= form_with model: @party, method: method, local: true do |f| %>
   <%= f.label :date%>
   <%= f.datetime_field :time%>
   <%= f.label :duration %>
   <%= f.number_field :duration %>
   <%= f.label :friends %>
-  <%= f.collection_check_boxes :invites, current_user.friends, :email, :id %>
+  <%= f.collection_check_boxes :guests, current_user.friends, :id, :email %>
   <%= f.submit "Create Party"%>
 <% end %>

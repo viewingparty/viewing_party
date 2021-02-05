@@ -1,5 +1,6 @@
 class PartiesController < ActionController::Base
-  before_action :create_movie, only: [:create]
+  before_action :set_movie, only: [:new, :create]
+  # after_action :add_movie_to_party, only: [:create]
   def new
     session[:movie] = {title: params[:title],
       duration: params[:duration],
@@ -9,8 +10,8 @@ class PartiesController < ActionController::Base
   end
   
   def create
-    # binding.pry
-    current_user.parties.create(party_params.merge(movie: @movie))
+    pc = PartyCreator.new(params, current_user, @movie)
+    pc.make_the_party
     redirect_to user_dashboard_path(current_user)
   end
 
@@ -19,7 +20,7 @@ class PartiesController < ActionController::Base
     params.require(:party).permit(:title, :duration, :time)
   end
 
-  def create_movie
+  def set_movie
     if !(@movie = Movie.find_by(title: session[:movie][:title]))
       @movie = Movie.create(session[:movie])
     end

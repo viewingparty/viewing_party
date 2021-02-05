@@ -8,7 +8,8 @@ class Film
                 :popularity,
                 :genres,
                 :runtime,
-                :reviews
+                :reviews,
+                :poster
 
     def initialize(data, cast = "nil", reviews = "nil")
         @title = data[:title]
@@ -22,6 +23,7 @@ class Film
         @genres = data[:genres]
         @cast = cast
         @reviews = reviews
+        @poster = data[:poster_path]
     end
 
     def cast

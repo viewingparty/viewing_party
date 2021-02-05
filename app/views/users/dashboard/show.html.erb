@@ -29,9 +29,17 @@
   <% end %>
 </section>
 
-<section class="parties">
+<section class="my_parties">
   <%= "Viewing Parties" %>
   <% current_user.parties.each do |party| %>
     <%=  party.movie.title%>
+  <% end %>
+</section>
+
+<section class="parties_im_invited_to">
+  <h3> Party Invites </h3>
+  <% current_user.guests.each do |guest| %>
+    <%= guest.movie.title %>
+    <%= guest.party.time %>
   <% end %>
 </section>
