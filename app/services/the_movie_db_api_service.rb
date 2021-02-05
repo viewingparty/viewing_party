@@ -12,7 +12,7 @@ class TheMovieDbApiService
     end
 
     def movies_by_genre(arg)
-      response = faraday.get("/3/discover/movie?genre=#{arg}")
+      response = faraday.get("/3/discover/movie?with_genres=#{arg}")
       parse(response)
     end
 

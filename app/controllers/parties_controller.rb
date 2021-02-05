@@ -1,10 +1,10 @@
 class PartiesController < ApplicationController
-  before_action :set_movie, only: %I[new create]
-  # after_action :add_movie_to_party, only: [:create]
+  before_action :set_movie, only: [:create]
   def new
     session[:movie] = { title: params[:title],
                         duration: params[:duration],
-                        sapi_id: params[:api_id] }
+                        api_id: params[:api_id] }
+    @movie = session[:movie]
     @party = Party.new(duration: params[:duration])
   end
 
@@ -21,7 +21,8 @@ class PartiesController < ApplicationController
   end
 
   def set_movie
-    return @movie = Movie.create(session[:movie]) unless
-    (@movie = Movie.find_by(title: session[:movie][:title]))
+    if !(@movie = Movie.find_by(title: session[:movie][:title]))
+      @movie = Movie.create(session[:movie])
+    end
   end
 end

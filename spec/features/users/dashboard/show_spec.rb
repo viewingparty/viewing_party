@@ -24,7 +24,7 @@ describe 'as an authenticated user' do
     it 'has friends and parties' do
       login_as(@user)
       visit user_dashboard_path(@user)
-      within(".parties") do
+      within(".my_parties") do
         expect(page).to have_content(@party.movie.title)
         expect(page).to have_content(@party2.movie.title)
       end
