@@ -1,0 +1,4 @@
+<section class="friends">
+  <%= "Friends" %>
+  <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friends) || "You currently have no friends." %>
+</section>
