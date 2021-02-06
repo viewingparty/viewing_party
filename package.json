@@ -1,5 +1,30 @@
 {
   "name": "viewing_party",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "description": "This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "postcss app/assets/stylesheets/tailwind.css -o app/assets/stylesheets/custom.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viewingparty/viewing_party.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viewingparty/viewing_party/issues"
+  },
+  "homepage": "https://github.com/viewingparty/viewing_party#readme"
 }
