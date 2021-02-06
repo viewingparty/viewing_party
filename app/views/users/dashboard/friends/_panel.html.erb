@@ -5,5 +5,5 @@
 
 <section class="friend_invites">
   <%= "Friend Invites" %>
-  <%= render(partial: "users/dashboard/friends/friend_invite", collection: current_user.friend_invites, as: :frinvite) %>
+  <%= render(partial: "users/dashboard/friends/friend_invite", collection: current_user.friend_invites, as: :frinvite) || "You currently have no friend invitations." %>
 </section>
