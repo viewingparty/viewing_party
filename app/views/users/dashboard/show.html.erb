@@ -9,17 +9,6 @@
 
 <%= render "users/dashboard/friends/panel" %>
 
-<section class="friend_invites">
-  <%= "Friend Invites" %>
-  <% current_user.friend_invites.each do |frinvite| %>
-    <div id="invite-<%= frinvite.id %>">
-      <%= frinvite.user.email %>
-      <%= button_to 'Accept', user_friendships_path(current_user), params: {user: frinvite.user, status: :accepted}, method: :post %>
-      <%= button_to 'Reject', user_friendships_path(current_user), params: {friendship_id: frinvite.id, status: :rejected}, method: :patch %>
-    </div>
-  <% end %>
-</section>
-
 <section class="my_parties">
   <%= "Viewing Parties" %>
   <% current_user.parties.each do |party| %>
