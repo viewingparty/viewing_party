@@ -18,7 +18,7 @@ describe 'as an authenticated user' do
       login_as(@user)
       visit user_dashboard_path(@user)
 
-      expect(page).to have_button("Discover Movies")
+      expect(page).to have_link("Discover Movies")
     end
 
     it 'has friends and parties' do
