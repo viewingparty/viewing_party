@@ -5,7 +5,6 @@ class TheMovieDbApiService
         response.map do |re|
           parse(re)[:results]
         end.flatten.first(ENV['top_rated_limit'].to_i)
-        binding.pry
       else
         response << faraday.get("/3/movie/top_rated?certification_country=US&page=#{iterations += 1}")
         top_rated_movies(response, iterations)
