@@ -1,0 +1,5 @@
+<div id="invite-<%= frinvite.id %>">
+  <%= frinvite.user.email %>
+  <%= button_to 'Accept', user_friendships_path(current_user), params: {user: frinvite.user, status: :accepted}, method: :post %>
+  <%= button_to 'Reject', user_friendships_path(current_user), params: {friendship_id: frinvite.id, status: :rejected}, method: :patch %>
+</div>

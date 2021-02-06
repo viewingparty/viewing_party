@@ -12,9 +12,5 @@
     <%= form.submit "Find by Genre" %>
 <% end %>
 
-<% if @movies.respond_to? :each %>
-    <% @movies.each do |movie| %>
-        <%= link_to movie.title, movie_path(movie.api_id) %>
-        <%= movie.vote_average %><br>
-    <% end %>
-<% end %>
+
+<%= render(partial: "movie", collection: @movies) || "There are no movies available"%>

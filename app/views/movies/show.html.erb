@@ -8,11 +8,7 @@
 <% @movie.genres.each do |genre| %>
   <%= genre[:name] %>
 <% end %><br><br>
-<% @movie.reviews.each do |review| %>
-  <%= review[:author] %>
-  <%= review[:content] %>
-<% end %><br>
-<% @movie.cast.each do |member| %>
-  name: <%= member[:name] %> ---
-  character: <%= member[:character] %><br>
-<% end %>
+
+<%= render partial: "review", collection: @movie.reviews %>
+
+<%= render partial: "role", collection: @movie.cast%>
