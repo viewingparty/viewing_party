@@ -22,26 +22,17 @@ RSpec.describe "Logging" do
 
   describe "Out" do
     it "can log out" do
-      user = User.create(email: "user@example.com", password: "hunter2")
-      
-      visit root_path
-      
-      login = "Log in"
+      @user = User.create(email: "user@example.com", password: "hunter2")
+      login_as(@user)
       logout = "Log out"
-      
-      click_button login
-      
-      fill_in :user_email, with: user.email
-      fill_in 'user[password]', with: user.password
-      
-      click_button login
+      login = "Log in"
+      visit root_path
+      expect(page).to_not have_link(login)
 
-      expect(page).to_not have_button(login)
-
-      click_button logout
+      click_link logout
 
       expect(current_path).to eq(root_path)
-      expect(page).to have_button(login)
+      expect(page).to have_link(login)
     end
   end
 end
