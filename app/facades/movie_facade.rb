@@ -3,7 +3,7 @@ class MovieFacade
     def search_movies(params)
       if params[:query].present?
         data = TheMovieDbApiService.find_by_title(params[:query])[:results]
-        movies(data)
+        movies(data.first(ENV['search_limit'].to_i))
       elsif params[:top_rated].present?
         data = TheMovieDbApiService.top_rated_movies
         movies(data)
