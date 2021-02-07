@@ -61,5 +61,11 @@ describe 'as an authenticated user' do
 
       expect(@user2.friends.count).to eq(0)
     end
+
+    it 'must be logged in' do
+      visit user_dashboard_path(@user2)
+
+      expect(current_path).to eq(root_path)
+    end
   end
 end
