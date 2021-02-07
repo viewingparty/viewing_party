@@ -1,12 +1,10 @@
 class TheMovieDbApiService
   class << self
     def top_rated_movies(response = [], iterations = 0)
-      if response.length >= ENV['top_rated_limit'].to_i
-        response.map do |re|
-          parse(re)[:results]
-        end.flatten.first(ENV['top_rated_limit'].to_i)
+      if response.flatten.length >= ENV['top_rated_limit'].to_i
+        response.flatten.first(ENV['top_rated_limit'].to_i)
       else
-        response << faraday.get("/3/movie/top_rated?certification_country=US&page=#{iterations += 1}")
+        response << parse(faraday.get("/3/movie/top_rated?certification_country=US&page=#{iterations += 1}"))[:results]
         top_rated_movies(response, iterations)
       end
     end
