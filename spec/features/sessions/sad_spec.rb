@@ -8,19 +8,19 @@ RSpec.describe "Logging in" do
 
     login = "Log in"
 
-    click_button login
+    click_on login
 
     fill_in :user_email, with: "user@notexample.com"
     fill_in :user_password, with: user.password
 
-    click_button login
+    click_on login
 
     expect(current_path).to eq(user_session_path)
 
     fill_in :user_email, with: "user@example.com"
     fill_in :user_password, with: "hunter"
 
-    click_button login
+    click_on login
 
     expect(current_path).to eq(user_session_path)
   end
