@@ -67,5 +67,17 @@ describe 'as an authenticated user' do
 
       expect(current_path).to eq(root_path)
     end
+
+    it 'can render invites' do
+      guest = Guest.create!(party: @party, user: @user2)
+
+      login_as(@user2)
+
+      visit user_dashboard_path(@user2)
+
+      within(".parties_im_invited_to") do
+        expect(page).to have_content(@movie.title)
+      end
+    end
   end
 end
