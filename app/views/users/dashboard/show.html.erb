@@ -10,15 +10,10 @@
 
 <section class="my_parties">
   <%= "Viewing Parties" %>
-  <% current_user.parties.each do |party| %>
-    <%=  party.movie.title%>
-  <% end %>
+  <%= render partial: "party", collection: current_user.parties %>
 </section>
 
 <section class="parties_im_invited_to">
   <h3> Party Invites </h3>
-  <% current_user.guests.each do |guest| %>
-    <%= guest.movie.title %>
-    <%= guest.party.time %>
-  <% end %>
+  <%= render partial: "pending_invite", collection: current_user.guests, as: :guest %>
 </section>
