@@ -21,7 +21,7 @@ class PartiesController < ApplicationController
   end
 
   def set_movie
-    if !(@movie = Movie.find_by(title: session[:movie][:title]))
+    unless (@movie = Movie.find_by(title: session[:movie][:title]))
       @movie = Movie.create(session[:movie])
     end
   end
