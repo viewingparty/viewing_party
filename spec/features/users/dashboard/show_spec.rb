@@ -5,6 +5,7 @@ describe 'as an authenticated user' do
     before :each do
       @user = User.create(email: "admin@example.com", password: "password")
       @user2 = User.create(email: "billy@bob.com", password: "password")
+      @user3 = User.create(email: "nope@gmail.com", password: "password")
       @invite = Friendship.create(user: @user, friend: @user2)
       @movie = Movie.create(api_id: 50, duration: "120", title: "bobs funeral")
       @movie2 = Movie.create(api_id: 50, duration: "120", title: "billies funeral")
@@ -78,6 +79,19 @@ describe 'as an authenticated user' do
       within(".parties_im_invited_to") do
         expect(page).to have_content(@movie.title)
       end
+    end
+
+    it 'can create friends' do
+      login_as(@user)
+
+      visit user_dashboard_path(@user)
+
+      fill_in "email", with: "#{@user3.email}"
+      click_on "Add Friend"
+      save_and_open_page
+
+      expect(current_path).to eq(user_dashboard_path(@user))
+      expect(page).to have_content(@user3.email)
     end
   end
 end
