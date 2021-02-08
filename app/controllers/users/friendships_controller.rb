@@ -16,6 +16,7 @@ class Users::FriendshipsController < ApplicationController
   end
 
   def update
+    # binding.pry
     invite = Friendship.find(params[:friendship_id])
     invite.update(friendship_params)
     redirect_to user_dashboard_path(current_user)

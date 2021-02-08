@@ -96,6 +96,7 @@ describe 'as an authenticated user' do
       visit user_dashboard_path(@user3)
 
       expect(page).to have_content(@user.email)
+      save_and_open_page
       click_button "Accept"
       # save_and_open_page
       expect(page).to have_content(@user.email)

@@ -9,6 +9,15 @@ class Friendship < ApplicationRecord
   end
 
   def self.friends(user_id)
-    fs = where(user_id: user_id).or(where(friend_id: user_id))
+    fs = where(user_id: user_id).or(where(friend_id: user_id)).where(status: 1)
+    a = fs.pluck(:friend_id) + fs.pluck(:user_id)
+    a = a.select do |element|
+      element != user_id
+    end
+    b = []  
+    a.each do |user|
+      b << User.find(user)
+    end
+    b
   end
 end
