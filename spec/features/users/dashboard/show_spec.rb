@@ -97,7 +97,7 @@ describe 'as an authenticated user' do
 
       expect(page).to have_content(@user.email)
       click_button "Accept"
-      save_and_open_page
+      # save_and_open_page
       expect(page).to have_content(@user.email)
     end
   end

@@ -3,7 +3,7 @@
     <%= "Friends" %>
   </header>
   <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
-    <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friendships.befriended) || "You currently have no friends." %>
+    <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friends) || "You currently have no friends." %>
   </article>
 </section>
 <section class="friend_invites">
