@@ -6,14 +6,25 @@
   <%= form.submit "Add Friend" %>
 <% end %>
 
-<%= render "users/dashboard/friends/panel" %>
-
-<section class="my_parties">
-  <%= "Viewing Parties" %>
-  <%= render partial: "party", collection: current_user.parties %>
-</section>
-
-<section class="parties_im_invited_to">
-  <h3> Party Invites </h3>
-  <%= render partial: "pending_invite", collection: current_user.guests, as: :guest %>
-</section>
+<div class="container mx-auto type-page">
+  <div class="grid grid-cols-2 cold-gap-12 md:col-gap-12 md:grid-cols-2">
+  <div class="grid grid-cols-2 col-gap-12 md:col-gap-12 md:grid-cols-2 scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
+    <section class="my_parties">
+      <header class="flex flex-col items-center">
+        <%= "Viewing Parties" %>
+      </header>
+      <%= render partial: "party", collection: current_user.parties %>
+    </section>
+    
+    <section class="parties_im_invited_to">
+      <header class="flex flex-col items-center">
+        <h3> Party Invites </h3>
+      </header>
+      <%= render partial: "pending_invite", collection: current_user.guests, as: :guest %>
+    </section>
+    </div>
+    <div class="grid grid-cols-2 col-gap-12 md:col-gap-12 md:grid-cols-2 scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
+      <%= render "users/dashboard/friends/panel" %>
+    </div>
+  </div>
+</div>
