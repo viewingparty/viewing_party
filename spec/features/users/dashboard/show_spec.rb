@@ -88,10 +88,17 @@ describe 'as an authenticated user' do
 
       fill_in "email", with: "#{@user3.email}"
       click_on "Add Friend"
-      save_and_open_page
 
       expect(current_path).to eq(user_dashboard_path(@user))
-      expect(page).to have_content(@user3.email)
+
+      logout(@user)
+      login_as(@user3)
+      visit user_dashboard_path(@user3)
+
+      expect(page).to have_content(@user.email)
+      click_button "Accept"
+      save_and_open_page
+      expect(page).to have_content(@user.email)
     end
   end
 end

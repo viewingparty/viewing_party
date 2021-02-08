@@ -1,6 +1,6 @@
 class Users::FriendshipsController < ApplicationController
   def create
-    require 'pry'; binding.pry
+    # require 'pry'; binding.pry
     friend = User.find_by(email: params[:email])
     Friendship.create!(user: current_user, friend: friend)
 
@@ -18,6 +18,7 @@ class Users::FriendshipsController < ApplicationController
   def update
     invite = Friendship.find(params[:friendship_id])
     invite.update(friendship_params)
+    redirect_to user_dashboard_path(current_user)
   end
 
   private
