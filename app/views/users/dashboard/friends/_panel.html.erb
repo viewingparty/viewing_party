@@ -1,9 +1,16 @@
 <section class="friends">
-  <%= "Friends" %>
-  <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friends) || "You currently have no friends." %>
+  <header class="flex flex-col items-center">
+    <%= "Friends" %>
+  </header>
+  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+    <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friends) || "You currently have no friends." %>
+  </article>
 </section>
-
 <section class="friend_invites">
-  <%= "Friend Invites" %>
-  <%= render(partial: "users/dashboard/friends/friend_invite", collection: current_user.friend_invites, as: :frinvite) || "You currently have no friend invitations." %>
+  <header class="flex flex-col items-center">
+    <%= "Friend Invites" %>
+  </header>
+  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+    <%= render(partial: "users/dashboard/friends/friend_invite", collection: current_user.friend_invites, as: :frinvite) || "You currently have no friend invitations." %>
+  </article>
 </section>
