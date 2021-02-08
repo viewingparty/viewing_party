@@ -15,7 +15,9 @@ class TheMovieDbApiService
     end
 
     def movies_by_genre(arg)
-      response = faraday.get("/3/discover/movie?with_genres=#{arg}")
+      response = faraday.get("/3/discover/movie") do |req|
+        req.params[:with_genres] = arg
+      end
       parse(response)
     end
 
@@ -48,6 +50,7 @@ class TheMovieDbApiService
     def faraday
       Faraday.new('https://api.themoviedb.org') do |faraday|
         faraday.params['api_key'] = ENV['movie_api']
+        # faraday.params[:certification_country] = 'US'
       end
     end
   end
