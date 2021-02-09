@@ -9,7 +9,7 @@ RSpec.describe Friendship, type: :model do
     it {should belong_to :friend}
   end
 
-  describe 'instance methods' do
+  describe 'class methods' do
     it 'can find friends and approved friends' do
       # for more rigourous testing see "/models/user_spec.rb"
       user = User.create(email: "admin@example.com", password: "password")
