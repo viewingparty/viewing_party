@@ -11,6 +11,6 @@ class Friendship < ApplicationRecord
   end
 
   def self.approved_friendships(id)
-    where("friendships.status = ? AND (friendships.user_id = ? OR friendships.friend_id = ?)", 1, id, id)
+    where("friendships.status = 1 AND (friendships.user_id = ? OR friendships.friend_id = ?)", id, id)
   end
 end
