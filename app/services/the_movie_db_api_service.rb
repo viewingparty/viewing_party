@@ -10,17 +10,30 @@ class TheMovieDbApiService
     end
 
     def movie_genre_select
-      response = faraday.get('/3/genre/movie/list')
-      parse(response)
+      faraday.get('/3/genre/movie/list')
+    end
+
+    [:movie_genre_select].each do |call|
+      alias_method "original_#{call.to_s}".to_sym, call
+
+      define_method call do
+        parse(send("original_#{call.to_s}".to_sym))
+      end
     end
 
     def movies_by_genre(arg)
-      response = faraday.get("/3/discover/movie?with_genres=#{arg}")
+      response = faraday.get("/3/discover/movie") do |req|
+        req.params['with_genres'] = arg
+      end
       parse(response)
     end
 
     def find_by_title(arg)
-      response = faraday.get("/3/search/movie?certification_country=US&language=en-US&query=#{arg}")
+      response = faraday.get("/3/search/movie") do |req|
+        req.params['certification_country'] = "US"
+        req.params['language'] = "en-US"
+        req.params['query'] = arg
+      end
       parse(response)
     end
 
