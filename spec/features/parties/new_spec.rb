@@ -44,7 +44,7 @@ RSpec.describe "Making a new Party" do
       click_on "The Departed"
       click_on "Create A Party"
       fill_in 'party[duration]', with: "90"
-      page.check("party_guests_#{@friend.id}")
+      check "party_guests_#{@friend.id}"
       expect(page).to_not have_content(@stranger.email)
 
       click_on 'Create Party'

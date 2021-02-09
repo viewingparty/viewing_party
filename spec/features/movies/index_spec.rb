@@ -8,31 +8,24 @@ describe 'as an authenticated user' do
         login_as(@user)
       end
 
-      it 'can show me the top rated movies' do
-        VCR.use_cassette("movies_index") do
-          visit discover_index_path
+        it 'can show me the top rated movies' do
+          VCR.use_cassette("movies_index") do
+            visit discover_index_path
 
-          click_on "Top Rated Movies"
+            click_on "Top Rated Movies"
 
-          expect(current_path).to eq(movies_path)
-          expect("Wolfwalkers").to appear_before("The Godfather: Part II")
+            expect(current_path).to eq(movies_path)
+            expect("Wolfwalkers").to appear_before("The Godfather: Part II")
+          end
         end
-      end
 
-      it 'has the top rated and search options still' do
-        VCR.use_cassette("movies_index") do
-          visit movies_path
+        it 'has the top rated and search options still' do
+          VCR.use_cassette("movies_index") do
+            visit movies_path
 
-          expect(page).to have_button("Top Rated Movies")
-          expect(page).to have_button("Find Movies")
+            expect(page).to have_button("Top Rated Movies")
+            expect(page).to have_button("Find Movies")
+          end
         end
-      end
-      it 'can search by genre' do
-        VCR.use_cassette("genre_index") do
-          visit movies_path(genre: 28)
-
-          expect(page).to have_content("Wonder Woman 1984")
-        end
-      end
     end
 end

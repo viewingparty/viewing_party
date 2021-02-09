@@ -9,7 +9,7 @@ class PartiesController < ApplicationController
   end
 
   def create
-    pc = PartyCreator.new(party_params.merge(enabled: false, guests: params[:party][:guests]), current_user, @movie)
+    pc = PartyCreator.new(party_params.merge(guests: params[:guests]), current_user, @movie)
     pc.make_the_party
     redirect_to user_dashboard_path(current_user)
   end
@@ -17,7 +17,7 @@ class PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party).permit(:title, :duration, :time, :enabled)
+    params.require(:party).permit(:title, :duration, :time)
   end
 
   def set_movie
