@@ -15,9 +15,6 @@ class User < ApplicationRecord
   end
 
   def friends
-    approved_friendships = (friendships.where(status: 1) + Friendship.where(friend: self).where(status: 1))
-    approved_friendships.map do |friendship|
-      friendship.user_id == self.id ? friendship.friend : friendship.user
-    end
+    Friendship.friends(self.id)
   end
 end
