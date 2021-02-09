@@ -1,6 +1,6 @@
 # Viewing Party
 
-This was built from the base repo: [viewing party project](https://backend.turing.io/module3/projects/viewing_party) from [Turing School of Software and Design](https://turing.io)
+This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.
 
 ### About this App
 
@@ -96,10 +96,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
    ```
    bundle install
    ```
-4. Setup the database: 
-   ```
-   rails db:setup
-   ```
+4. Setup the database: `rails db:create`
 5. Enter your API and ENV variables in `config/application.yml`
    ```
    movie_api: 'ENTER YOUR API'
