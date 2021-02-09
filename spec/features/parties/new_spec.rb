@@ -45,9 +45,7 @@ RSpec.describe "Making a new Party" do
       click_on "Create A Party"
       fill_in 'party[duration]', with: "90"
       page.check("party_guests_#{@friend.id}")
-      find(:css, "#party_guests_#{@friend.id}").set(true)
       expect(page).to_not have_content(@stranger.email)
-      save_and_open_page
 
       click_on 'Create Party'
       expect(current_path).to eq(user_dashboard_path(@host))
