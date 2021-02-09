@@ -23,6 +23,6 @@ class User < ApplicationRecord
   private
 
   def approved_friendships
-    Friendship.where("friendships.status = 1 AND (friendships.user_id = ? OR friendships.friend_id = ?)", id, id)
+    Friendship.where("friendships.status = 1 AND (friendships.user_id = #{id} OR friendships.friend_id = #{id})")
   end
 end
