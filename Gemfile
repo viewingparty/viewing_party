@@ -26,7 +26,6 @@ group :development, :test do
   gem "orderly"
   gem "rails-erd"
   gem "awesome_print", :require => "ap"
-  gem "hirb"
   gem "factory_bot_rails"
 end
 

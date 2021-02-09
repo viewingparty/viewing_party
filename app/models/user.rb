@@ -7,11 +7,14 @@ class User < ApplicationRecord
   validates :email, presence: :email
 
   has_many :friendships, dependent: :destroy
-  has_many :friends, through: :friendships
   has_many :guests, dependent: :destroy
   has_many :parties, dependent: :destroy
 
   def friend_invites
     Friendship.where(friend: self, status: :pending)
+  end
+
+  def friends
+    Friendship.friends(self.id)
   end
 end
