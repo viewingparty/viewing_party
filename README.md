@@ -4,7 +4,11 @@ This is the base repo for the [viewing party project](https://backend.turing.io/
 
 ### About this App
 
-Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friend's.
+Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friend's. 
+
+This project is deployed on:
+[Heroku here](https://viewingfiesta.heroku.com)
+[AWS here](https://www.example.com)
 
 ## Versions
 
@@ -64,6 +68,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 
+* [Ruby on Rails](https://rubyonrails.org/)
 * [Tailwinds](https://tailwindcss.com)
 * [RSpec](https://github.com/rspec/rspec-rails)
 
@@ -85,7 +90,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
    git clone https://github.com/viewingparty/viewing_party.git
    ```
 3. Install gems
-   ```sh
+   ```
    bundle install
    ```
 4. Enter your API and ENV variables in `config/application.yml`
@@ -137,25 +142,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/ribbansmax/viewing_party](https://github.com/ribbansmax/viewing_party)
+Project Link: [https://github.com/viewingparty/viewing_party](https://github.com/ribbansmax/viewing_party)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Rubocop](https://rubocop.org/)
 * [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
+* [MIT Open Source License](https://opensource.org/licenses/MIT)
 * [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 * [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
 
 
@@ -165,12 +161,12 @@ Project Link: [https://github.com/ribbansmax/viewing_party](https://github.com/r
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ribbansmax/viewing_party.svg?style=for-the-badge
-[contributors-url]: https://github.com/ribbansmax/viewing_party/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ribbansmax/viewing_party.svg?style=for-the-badge
-[forks-url]: https://github.com/ribbansmax/viewing_party/network/members
-[stars-shield]: https://img.shields.io/github/stars/ribbansmax/viewing_party.svg?style=for-the-badge
-[stars-url]: https://github.com/ribbansmax/viewing_party/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ribbansmax/viewing_party.svg?style=for-the-badge
-[issues-url]: https://github.com/ribbansmax/viewing_party/issues
+[contributors-shield]: https://img.shields.io/github/contributors/viewingparty/viewing_party.svg?style=for-the-badge
+[contributors-url]: https://github.com/viewingparty/viewing_party/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/viewingparty/viewing_party.svg?style=for-the-badge
+[forks-url]: https://github.com/viewingparty/viewing_party/network/members
+[stars-shield]: https://img.shields.io/github/stars/viewingparty/viewing_party.svg?style=for-the-badge
+[stars-url]: https://github.com/viewingparty/viewing_party/stargazers
+[issues-shield]: https://img.shields.io/github/issues/viewingparty/viewing_party.svg?style=for-the-badge
+[issues-url]: https://github.com/viewingparty/viewing_party/issues
 [product-screenshot]: images/screenshot.png
