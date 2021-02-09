@@ -49,7 +49,7 @@ GEM
     awesome_print (1.8.0)
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootsnap (1.7.0)
+    bootsnap (1.7.2)
       msgpack (~> 1.0)
     builder (3.2.4)
     capybara (3.35.3)
@@ -110,7 +110,6 @@ GEM
       activesupport (>= 4.2.0)
     hashdiff (1.0.1)
     highline (2.0.3)
-    hirb (0.7.3)
     i18n (1.8.8)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -140,7 +139,7 @@ GEM
     multipart-post (2.1.1)
     net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
-    nio4r (2.5.4)
+    nio4r (2.5.5)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -152,7 +151,7 @@ GEM
     parser (3.0.0.0)
       ast (~> 2.4.1)
     pg (1.2.3)
-    pry (0.13.1)
+    pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (4.0.6)
@@ -317,7 +316,6 @@ DEPENDENCIES
   factory_bot_rails
   faraday
   figaro
-  hirb
   jbuilder (~> 2.5)
   launchy
   listen (>= 3.0.5, < 3.2)

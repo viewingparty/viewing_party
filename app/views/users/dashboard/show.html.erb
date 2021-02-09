@@ -2,7 +2,7 @@
 
 <%= form_with url: user_friendships_path(current_user), method: :post, local: true do |form| %>
   <%= form.label "Add/Invite a friend by email." %><br>
-  <%= form.text_field :friend %>
+  <%= form.text_field :email %>
   <%= form.submit "Add Friend" %>
 <% end %>
 
