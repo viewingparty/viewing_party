@@ -10,8 +10,15 @@ class TheMovieDbApiService
     end
 
     def movie_genre_select
-      response = faraday.get('/3/genre/movie/list')
-      parse(response)
+      faraday.get('/3/genre/movie/list')
+    end
+
+    [:movie_genre_select].each do |call|
+      alias_method "original_#{call.to_s}".to_sym, call
+
+      define_method call do
+        parse(send("original_#{call.to_s}".to_sym))
+      end
     end
 
     def movies_by_genre(arg)
