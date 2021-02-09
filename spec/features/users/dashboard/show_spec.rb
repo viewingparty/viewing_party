@@ -23,6 +23,7 @@ describe 'as an authenticated user' do
     end
 
     it 'has friends and parties' do
+      @invite.update!(status: 1)
       login_as(@user)
       visit user_dashboard_path(@user)
       within(".my_parties") do
@@ -60,7 +61,7 @@ describe 'as an authenticated user' do
         click_on "Reject"
       end
 
-      expect(@user2.friends.count).to eq(0)
+      expect(page).to_not have_content(@user.email)
     end
 
     it 'must be logged in' do
@@ -96,9 +97,9 @@ describe 'as an authenticated user' do
       visit user_dashboard_path(@user3)
 
       expect(page).to have_content(@user.email)
-      save_and_open_page
       click_button "Accept"
       # save_and_open_page
+      # binding.pry
       expect(page).to have_content(@user.email)
     end
   end

@@ -5,7 +5,7 @@ RSpec.describe "Making a new Party" do
     before :each do
       @host = User.create(email: 'host@example.com', password: 'hunter2')
       @friend = User.create(email: 'friend@example.com', password: 'hunter2')
-      Friendship.create(user: @host, friend: @friend)
+      @friendship = Friendship.create(user: @host, friend: @friend)
       @stranger = User.create(email: 'stranger@example.com', password: 'hunter2')
 
       login_as(@host)
@@ -36,7 +36,13 @@ RSpec.describe "Making a new Party" do
     end
 
     it "can invite friends to party" do
-
+      @friendship.update!(status: 1)
+      visit user_dashboard_path(@host)
+      click_on "Discover Movies"
+      fill_in 'query', with: "The Departed"
+      click_on "Find Movies"
+      click_on "The Departed"
+      click_on "Create A Party"
       fill_in 'party[duration]', with: "90"
       check "party_guests_#{@friend.id}"
       expect(page).to_not have_content(@stranger.email)

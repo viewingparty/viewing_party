@@ -17,6 +17,6 @@ class User < ApplicationRecord
   end
 
   def friends
-    friendships.friends(self.id)
+    (friendships.where(status: 1) + Friendship.where(friend: self).where(status: 1)).map {|friendship| friendship.user_id == self.id ? friendship.friend : friendship.user}
   end
 end
