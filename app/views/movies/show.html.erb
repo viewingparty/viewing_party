@@ -1,9 +1,9 @@
-<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id} %>
+<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id}, class: "bg-blue-200" %>
 
 <h3> Title: <%= @movie.title %><br></h3><br>
-<%= @movie.vote_average %><br>
-<%= @movie.runtime %><br>
-<%= @movie.overview %>
+Vote average: <%= @movie.vote_average %><br>
+Duration: <%= @movie.runtime %><br>
+Synapsis: <%= @movie.overview %>
 <%= @movie.reviews.count %><br>
 <% @movie.genres.each do |genre| %>
   <%= genre[:name] %>

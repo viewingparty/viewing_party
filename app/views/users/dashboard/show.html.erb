@@ -3,7 +3,7 @@
 <%= form_with url: user_friendships_path(current_user), method: :post, local: true do |form| %>
   <%= form.label "Add/Invite a friend by email." %><br>
   <%= form.text_field :email %>
-  <%= form.submit "Add Friend" %>
+  <%= form.submit "Add Friend", class: "button bg-blue-200"  %>
 <% end %>
 
 <div class="container mx-auto type-page">
