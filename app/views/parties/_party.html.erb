@@ -3,10 +3,10 @@
 </div>
 <%= form_with model: @party, method: method, local: true do |f| %>
   <%= f.label :date%>
-  <%= f.datetime_field :time%>
+  <%= f.datetime_field :time%><br>
   <%= f.label :duration %>
-  <%= f.number_field :duration %>
+  <%= f.number_field :duration %><br>
   <%= f.label :friends %>
-  <%= f.collection_check_boxes :guests, current_user.friends, :id, :email %>
-  <%= f.submit "Create Party"%>
+  <%= f.collection_check_boxes :guests, current_user.friends, :id, :email %><br><br>
+  <%= f.submit "Create Party", class: "bg-blue-200"%>
 <% end %>
