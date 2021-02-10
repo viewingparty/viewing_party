@@ -8,7 +8,8 @@
 <% @movie.genres.each do |genre| %>
   <%= genre[:name] %>
 <% end %><br><br>
-
-<%= render partial: "review", collection: @movie.reviews %>
-
 <%= render partial: "role", collection: @movie.cast%>
+
+<div class="panels">
+  <%= render partial: "review", collection: @movie.reviews %>
+</div>
