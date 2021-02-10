@@ -39,5 +39,14 @@ RSpec.describe User, type: :model do
       expect(user3.friends).to eq([])
       expect(user3.friend_invites).to eq([invite2])
     end
+
+    it 'can have pending friends' do
+      user = User.create(email: "admin@example.com", password: "password")
+      user2 = User.create(email: "billy@bob.com", password: "password")
+      user3 = User.create(email: "nope@gmail.com", password: "password")
+      invite = Friendship.create(user: user, friend: user2)
+
+      expect(user.pending_friends).to eq([invite])
+    end
   end
 end
