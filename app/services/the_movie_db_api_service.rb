@@ -24,6 +24,7 @@ class TheMovieDbApiService
     def movies_by_genre(arg)
       response = faraday.get("/3/discover/movie") do |req|
         req.params['with_genres'] = arg
+        req.params['sort_by']= 'vote_average.desc'
       end
       parse(response)
     end
