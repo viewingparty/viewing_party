@@ -15,6 +15,14 @@ class User < ApplicationRecord
   end
 
   def friends
-    Friendship.friends(self.id)
+    approved_friendships.map do |friendship|
+      friendship.user_id == id ? friendship.friend : friendship.user
+    end
+  end
+
+  private
+
+  def approved_friendships
+    Friendship.where("friendships.status = 1 AND (friendships.user_id = #{id} OR friendships.friend_id = #{id})")
   end
 end
