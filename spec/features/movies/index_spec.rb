@@ -31,7 +31,7 @@ describe 'as an authenticated user' do
         VCR.use_cassette("genre_index") do
           visit movies_path(genre: 28)
 
-          expect(page).to have_content("Wonder Woman 1984")
+          expect(page).to have_content("The Nightmare Before Christmas")
         end
       end
     end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/discover/movie?api_key=HIDE_MY_DATA&with_genres=Action
+    uri: https://api.themoviedb.org/3/discover/movie?api_key=HIDE_MY_DATA&sort_by=vote_average.desc&with_genres=Action
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 05 Feb 2021 17:48:56 GMT
+      - Wed, 10 Feb 2021 21:56:09 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,13 +42,13 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 b7cfac19a6192cffb29b5d2e38b8f9ba.cloudfront.net (CloudFront)
+      - 1.1 8bd27032f0d38908fbe32b696e45c288.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
-      - PeJWayXyZkW1l7KQDb2UqERpT3Q-fcNvwvcxJfEWLQ5LFyaRTkJ5cg==
+      - JC4R7F9nbnSvo59huv361xig7vHRRda66JxUuQACRLjMPAR_g2kx8A==
     body:
       encoding: UTF-8
       string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Fri, 05 Feb 2021 17:48:56 GMT
+  recorded_at: Wed, 10 Feb 2021 21:56:09 GMT
 recorded_with: VCR 6.0.0

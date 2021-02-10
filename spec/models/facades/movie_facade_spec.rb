@@ -18,7 +18,7 @@ describe MovieFacade do
     end
 
     it 'can collect genres' do
-        VCR.use_cassette("genres_collectin") do
+        VCR.use_cassette("genres_collection") do
             genres = MovieFacade.genres
 
             expect(genres).to be_an(Array)
