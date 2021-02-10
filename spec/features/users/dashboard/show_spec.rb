@@ -10,7 +10,7 @@ describe 'as an authenticated user' do
       @movie = Movie.create(api_id: 50, duration: "120", title: "bobs funeral")
       @movie2 = Movie.create(api_id: 50, duration: "120", title: "billies funeral")
 
-      @party = @user.parties.create(user: @user, movie: @movie, time: DateTime.current.strftime("%m%e%Y\t%l%M%p"))
+      @party = @user.parties.create(user: @user, movie: @movie, time: DateTime.current.strftime("%m%e%Y\t%l%M%p"), duration: "120")
       @party2 = @user.parties.create(user: @user, movie: @movie2, time: DateTime.current.strftime("%m%e%Y\t%l%M%p"))
 
       end
@@ -28,6 +28,7 @@ describe 'as an authenticated user' do
       visit user_dashboard_path(@user)
       within(".my_parties") do
         expect(page).to have_content(@party.movie.title)
+        expect(page).to have_content(@party.duration)
         expect(page).to have_content(@party2.movie.title)
       end
       within(".friends") do
