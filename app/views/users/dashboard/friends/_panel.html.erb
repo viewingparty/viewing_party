@@ -2,7 +2,7 @@
   <header class="flex flex-col items-center">
     <%= "Pending Friend Requests" %>
   </header>
-  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+  <article class="flex flex-col items-center bg-gray-200 justify-end flex-wrap border-solid border-4 border-light-blue-500">
     <%= render(partial: "users/dashboard/friends/pending_friends", collection: current_user.pending_friends, as: :pendfriend) || "No pending friend requests." %>
   </article>
 </section>
@@ -10,7 +10,7 @@
   <header class="flex flex-col items-center">
     <%= "Friends" %>
   </header>
-  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+  <article class="flex flex-col bg-gray-200 items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
     <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friends) || "You currently have no friends." %>
   </article>
 </section>
@@ -18,7 +18,7 @@
   <header class="flex flex-col items-center">
     <%= "Friend Invites" %>
   </header>
-  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+  <article class="flex flex-col items-center bg-gray-200 justify-end flex-wrap border-solid border-4 border-light-blue-500">
     <%= render(partial: "users/dashboard/friends/friend_invite", collection: current_user.friend_invites, as: :frinvite) || "You currently have no friend invitations." %>
   </article>
 </section>
