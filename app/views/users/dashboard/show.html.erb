@@ -25,8 +25,15 @@
         <%= render partial: "pending_invite", collection: current_user.guests, as: :guest %>
       </section>
     </div>
+
     <div class="grid grid-cols-1 mx-5 rounded-lg md:grid-cols-1 scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
-      <%= render "users/dashboard/friends/panel" %>
+      <ul>
+        <li><button id="friends-btn">Open Friends List</button></li>
+        <li><button id="pending-btn">Pending Friends List</button></li>
+        <li><button id="invites-btn">Friend Invites List</button></li>
+      </ul>
+          
+    <%= render "users/dashboard/friends/panel" %>
     </div>
   </div>
 </div>
