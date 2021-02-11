@@ -118,8 +118,8 @@ See the [open issues](https://github.com/viewingparty/viewing_party/issues) for 
 5. Enter your API and ENV variables in `config/application.yml`
    ```
    movie_api: 'ENTER YOUR API'
-   search_limit: '10'    /  less than or equal to 20
-   top_rated_limit: '50' /  can be any size
+   search_limit: '10'        #  less than or equal to 20
+   top_rated_limit: '50'     #  can be any size
    ```
 
 
