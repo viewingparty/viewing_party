@@ -1,22 +1,24 @@
-<ul class="grid grid-gutter justify-items-center items-center rounded-md w-8/12 bg-gray-200 grid-flow-col col-start-1 col-end-auto grid-cols-max-content gap-3 list-none md:flex md:flex-wrap -mx-6 md:mx-0 py-1 md:py-2 overflow-x-auto md:overflow-x-visible scrolling-touch scrollbar-hidden " >
-    <li class="flex-none inline-flex bg-gray-200 mx-10 px-10">
-        <%= button_to "Top Rated Movies", movies_path, params: {top_rated: true}, method: :get, class: "button bg-blue-200"  %>
-    </li>
-    <li class="flex-none inline-flex bg-gray-200 rounded-md">
+<div class="grid w-full justify-items-center">
+    <ul class="grid grid-gutter justify-items-center items-center rounded-md w-8/12 bg-gray-200 grid-flow-col col-start-1 col-end-auto grid-cols-max-content gap-3 list-none md:flex md:flex-wrap -mx-6 md:mx-0 py-1 md:py-2 overflow-x-auto md:overflow-x-visible scrolling-touch scrollbar-hidden " >
+        <li class="flex-none inline-flex bg-gray-200 mx-10 px-10">
+            <%= button_to "Top Rated Movies", movies_path, params: {top_rated: true}, method: :get, class: "button bg-blue-200"  %>
+        </li>
+        <li class="flex-none inline-flex bg-gray-200 rounded-md">
+            <%= form_with url: movies_path, method: :get, local: true do |form| %>
+                <%= form.label "Genre:" %>
+                <%= form.select :genre, @genres.map {|genre| [genre.name, genre.id]}, prompt: "Select Genre", id: "genre" %>
+                <%= form.submit "Find by Genre", class: "button bg-blue-200"  %>
+            <% end %>
+        </li>
+        <li class="flex-none inline-flex bg-gray-200">
         <%= form_with url: movies_path, method: :get, local: true do |form| %>
-            <%= form.label "Genre:" %>
-            <%= form.select :genre, @genres.map {|genre| [genre.name, genre.id]}, prompt: "Select Genre", id: "genre" %>
-            <%= form.submit "Find by Genre", class: "button bg-blue-200"  %>
+            <%= form.label "Title:" %>
+            <%= form.text_field :query %>
+            <%= form.submit "Find Movies", class: "button bg-blue-200"  %>
         <% end %>
-    </li>
-    <li class="flex-none inline-flex bg-gray-200">
-    <%= form_with url: movies_path, method: :get, local: true do |form| %>
-        <%= form.label "Title:" %>
-        <%= form.text_field :query %>
-        <%= form.submit "Find Movies", class: "button bg-blue-200"  %>
-    <% end %>
-    </li>
-</ul><br>
+        </li>
+    </ul>
+</div><br>
 
 <div class="container mx-auto w-full items-center page type-page">
   <header class="grid grid-cols-1 flex w-full justify-items-center mb-6">

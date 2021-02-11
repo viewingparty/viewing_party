@@ -1,6 +1,6 @@
-<h2>Welcome !<h2>
+<h2 class="text-white font-bold">Welcome !<h2><br>
 
-<ul class="grid grid-gutter grid-flow-col col-start-1 col-end-auto grid-cols-max-content gap-3 list-none md:flex md:flex-wrap -mx-6 md:mx-0 py-1 md:py-2 overflow-x-auto md:overflow-x-visible scrolling-touch scrollbar-hidden " >
+<ul class="grid grid-gutter grid-flow-col rounded-lg px-5 bg-gray-200 w-8/12 col-start-1 col-end-auto grid-cols-max-content gap-3 list-none md:flex md:flex-wrap -mx-6 md:mx-0 py-1 md:py-2 overflow-x-auto md:overflow-x-visible scrolling-touch scrollbar-hidden " >
     <li class="flex-none inline-flex">
         <%= button_to "Top Rated Movies", movies_path, params: {top_rated: true}, method: :get, class: "button bg-blue-200" %>
     </li>

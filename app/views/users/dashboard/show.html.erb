@@ -1,16 +1,16 @@
-<h1> Welcome </h1>
+<h1 class="text-white font-bold"> Welcome </h1>
 
 <%= form_with url: user_friendships_path(current_user), method: :post, local: true do |form| %>
-  <%= form.label "Add/Invite a friend by email." %><br>
+  <%= form.label "Add/Invite a friend by email.", class: "text-white" %><br>
   <%= form.text_field :email %>
-  <%= form.submit "Add Friend", class: "button bg-blue-200"  %>
-<% end %>
+  <%= form.submit "Add Friend", class: "button bg-blue-200 rounded-md mx-10 px-5"  %>
+<% end %><br>
 
-<div class="container mx-auto type-page">
-  <div class="grid grid-cols-2 cold-gap-12 md:col-gap-12 md:grid-cols-2">
-  <div class="grid grid-cols-2 col-gap-12 md:col-gap-12 md:grid-cols-2 scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
+<div class="container bg-gray-200 mx-auto type-page rounded-lg">
+  <div class="grid grid-cols-2 cold-gap-12 md:col-gap-12 md:grid-cols-2 rounded-lg">
+  <div class="grid grid-cols-2 col-gap-12 md:col-gap-12 md:grid-cols-2 rounded-lg scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
     <section class="my_parties bg-gray-200">
-      <header class="flex flex-col items-center bg-gray-200">
+      <header class="flex flex-col items-center bg-gray-200 rounded-lg">
         <%= "Viewing Parties" %>
       </header>
       <%= render partial: "party", collection: current_user.parties %>
@@ -23,7 +23,7 @@
       <%= render partial: "pending_invite", collection: current_user.guests, as: :guest %>
     </section>
     </div>
-    <div class="grid grid-cols-1 col-gap-12 md:col-gap-12 md:grid-cols-1 scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
+    <div class="grid grid-cols-1 col-gap-12 rounded-lg md:col-gap-12 md:grid-cols-1 scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
       <%= render "users/dashboard/friends/panel" %>
     </div>
   </div>

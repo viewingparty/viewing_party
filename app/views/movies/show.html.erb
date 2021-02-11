@@ -1,15 +1,17 @@
-<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id, poster: @movie.poster}, class: "bg-blue-200" %>
+<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id, poster: @movie.poster}, class: "bg-blue-200 rounded-lg px-5" %><br>
 
-<h3> Title: <%= @movie.title %><br></h3><br>
-<img src="https://image.tmdb.org/t/p/w500/<%= @movie.poster %>" alt="No Image Found"/><br>
-Vote average: <%= @movie.vote_average %><br>
-Duration: <%= @movie.runtime %><br>
-Synopsis: <%= @movie.overview %>
-<% @movie.genres.each do |genre| %>
-  <%= genre[:name] %>
-<% end %><br><br>
-<%= render partial: "role", collection: @movie.cast%>
-
+<h3 class="text-white"> Title: <%= @movie.title %><br></h3><br>
+<article class="text-white">
+  <img src="https://image.tmdb.org/t/p/w500/<%= @movie.poster %>" alt="No Image Found"/><br>
+  Vote average: <%= @movie.vote_average %><br>
+  Duration: <%= @movie.runtime %><br>
+  Synopsis: <%= @movie.overview %>
+  <% @movie.genres.each do |genre| %>
+    <%= genre[:name] %>
+  <% end %><br><br>
+  <%= render partial: "role", collection: @movie.cast%>
+</article>
+<br>
 <div class="panels">
   <%= render partial: "review", collection: @movie.reviews %>
 </div>
