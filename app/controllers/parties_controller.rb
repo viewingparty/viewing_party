@@ -3,7 +3,8 @@ class PartiesController < ApplicationController
   def new
     session[:movie] = { title: params[:title],
                         duration: params[:duration],
-                        api_id: params[:api_id] }
+                        api_id: params[:api_id],
+                        poster: params[:poster] }
     @movie = session[:movie]
     @party = Party.new(duration: params[:duration])
   end

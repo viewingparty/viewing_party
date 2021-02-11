@@ -1,4 +1,4 @@
-<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id}, class: "bg-blue-200" %>
+<%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id, poster: @movie.poster}, class: "bg-blue-200" %>
 
 <h3> Title: <%= @movie.title %><br></h3><br>
 Vote average: <%= @movie.vote_average %><br>
