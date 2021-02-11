@@ -1,5 +1,7 @@
 <article class="flex flex-col items-left justify-end flex-wrap border-solid border-4 border-light-blue-500">
-  Movie: <%= party.movie.title %><br>
+  <img src="https://image.tmdb.org/t/p/w200/<%= party.movie.poster %>" alt="No Image Found"/><br>
+  Movie: <%= link_to party.movie.title, movie_path(party.movie.api_id), class: "button bg-blue-200" %><br>
+
   Duration: <%=  party.duration %><br>
   Date: <%=  party.time %><br>
 </article>

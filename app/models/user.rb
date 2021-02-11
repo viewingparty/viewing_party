@@ -14,6 +14,10 @@ class User < ApplicationRecord
     Friendship.where(friend: self, status: :pending)
   end
 
+  def pending_friends
+    friendships.where(user: self, status: :pending)
+  end
+
   def friends
     approved_friendships.map do |friendship|
       friendship.user_id == id ? friendship.friend : friendship.user
