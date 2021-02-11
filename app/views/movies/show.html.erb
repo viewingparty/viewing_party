@@ -4,8 +4,7 @@
 <img src="https://image.tmdb.org/t/p/w500/<%= @movie.poster %>" alt="No Image Found"/><br>
 Vote average: <%= @movie.vote_average %><br>
 Duration: <%= @movie.runtime %><br>
-Synapsis: <%= @movie.overview %>
-<%= @movie.reviews.count %><br>
+Synopsis: <%= @movie.overview %>
 <% @movie.genres.each do |genre| %>
   <%= genre[:name] %>
 <% end %><br><br>
