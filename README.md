@@ -74,8 +74,9 @@ While users cannot currently watch the movies they select for their parties thro
 ### Built With
 
 * [Ruby on Rails](https://rubyonrails.org/)
-* [Tailwinds](https://tailwindcss.com)
 * [RSpec](https://github.com/rspec/rspec-rails)
+* [Tailwinds](https://tailwindcss.com)
+* [JavaScript](https://www.javascript.com)
 
 
 <!-- USAGE EXAMPLES -->
