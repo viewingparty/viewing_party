@@ -32,7 +32,7 @@ This project is deployed on:
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <li><a href="#usage">Usage</a></li>
+        <li><a href="#schema">Schema</a></li>
       </ul>
     </li>
     <li>
@@ -79,12 +79,14 @@ While users cannot currently watch the movies they select for their parties thro
 * [JavaScript](https://www.javascript.com)
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- SCHEMA -->
+## Schema
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+<object data="https://github.com/viewingparty/viewing_party/erd.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/viewingparty/viewing_party/erd.pdf">
+    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/erd.pdf>here</a></p>
+    </embed>
+</object>
 
 See the [open issues](https://github.com/viewingparty/viewing_party/issues) for a list of proposed features (and known issues).
 
