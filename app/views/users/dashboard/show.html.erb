@@ -12,7 +12,7 @@
       <header class="flex flex-col items-center bg-gray-200 font-bold rounded-lg text-2xl">
         <%= "My Viewing Parties" %>
       </header>
-      <div class="grid grid-cols-2 col-gap-12 md:col-gap-12 md:grid-cols-2 rounded-lg scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
+      <div class="grid grid-cols-2 gap-12 md:gap-12 md:grid-cols-2 rounded-lg scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
         <%= render partial: "party", collection: current_user.parties %>
       </div>
     </section>
@@ -20,7 +20,7 @@
       <header class="flex flex-col items-center bg-gray-200 font-bold rounded-lg text-2xl">
         <h3> Party Invites </h3>
       </header>
-      <div class="grid grid-cols-2 col-gap-12 md:col-gap-12 md:grid-cols-2 rounded-lg scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
+      <div class="grid grid-cols-2 gap-12 md:gap-12 md:grid-cols-2 rounded-lg scrolling-touch scrollbar-hidden overflow-x-scroll md:overflow-auto mx-6 md:mx-0">
         <%= render partial: "pending_invite", collection: current_user.guests, as: :guest %>
       </div>
     </section>
