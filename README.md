@@ -83,9 +83,9 @@ While users cannot currently watch the movies they select for their parties thro
 <!-- SCHEMA -->
 ## Schema
 
-<object data="https://github.com/viewingparty/viewing_party/erd.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/viewingparty/viewing_party/erd.pdf">
-    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/erd.pdf>here</a></p>
+<object data="https://github.com/viewingparty/viewing_party/blob/main/erd.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/viewingparty/viewing_party/blob/main/erd.pdf">
+    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/blob/main/erd.pdf>here</a></p>
     </embed>
 </object>
 
