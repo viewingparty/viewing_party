@@ -99,15 +99,10 @@ See the [open issues](https://github.com/viewingparty/viewing_party/issues) for 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-1. Fork and Clone the repo
-2. Install gem packages: `bundle install`
-     -- For list of Gems see [here](https://github.com/viewingparty/viewing_party/blob/main/Gemfile)
-
-
 ### Installation
 
 1. Get a free API Key at [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api)
-2. Clone the repo
+2. Fork and Clone the repo
    ```
    git clone https://github.com/viewingparty/viewing_party.git
    ```
@@ -123,10 +118,9 @@ See the [open issues](https://github.com/viewingparty/viewing_party/issues) for 
 5. Enter your API and ENV variables in `config/application.yml`
    ```
    movie_api: 'ENTER YOUR API'
-   search_limit: '10'
-   top_rated_limit: '50'
+   search_limit: '10'    /  less than or equal to 20
+   top_rated_limit: '50' /  can be any size
    ```
-   -- search_limit <= 20, top_rated_limit can be any size
 
 
 <!-- CONTRIBUTING -->
