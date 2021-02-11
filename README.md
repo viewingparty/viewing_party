@@ -10,7 +10,7 @@ This project is deployed on:
 
 - [Heroku here](https://viewingfiesta.herokuapp.com)
 
-<!---- [AWS here](https://www.example.com) ---!>
+<!-- [AWS here](https://www.example.com) -->
 
 ## Versions
 
