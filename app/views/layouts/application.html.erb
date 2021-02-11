@@ -18,12 +18,13 @@
             </li>
             <li class="flex-none inline-flex">
               <%= link_to "Dashboard", user_dashboard_path(current_user), method: :get, class: "button rounded-sm py-1 md:py-2 px-5 bg-blue-200 hover:bg-blue-500 hover:text-white focuse:bg-blue-500 focus:text-white transition duration-150-ease-in-out" %>
-            </li>
-            <% if current_page?(user_dashboard_path(current_user)) %>
-            <li class="flex-none inline-flex">
-            <%=  link_to "Discover Movies", discover_index_path, method: :get, class: "button rounded-sm py-1 md:py-2 px-5 bg-blue-200 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white transition duration-150-ease-in-out" %>
-            </li>
-            <% end %>
+              </li>
+              <% if current_page?(user_dashboard_path(current_user)) %>
+              <li class="flex-none inline-flex">
+              <%=  link_to "Discover Movies", discover_index_path, method: :get, class: "button rounded-sm py-1 md:py-2 px-5 bg-blue-200 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white transition duration-150-ease-in-out" %>
+              </li>
+              <% end %>
+              <%= render "users/dashboard/navbar" %>
           <% else %>
           <% if !current_page?(new_user_session_path) %>
             <li class="flex-none inline-flex">
