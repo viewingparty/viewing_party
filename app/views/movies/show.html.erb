@@ -1,6 +1,7 @@
 <%= button_to "Create A Party", new_party_path, method: "get", params: {title: @movie.title, duration: @movie.runtime, api_id: @movie.api_id, poster: @movie.poster}, class: "bg-blue-200" %>
 
 <h3> Title: <%= @movie.title %><br></h3><br>
+<img src="https://image.tmdb.org/t/p/w500/<%= @movie.poster %>" alt="No Image Found"/><br>
 Vote average: <%= @movie.vote_average %><br>
 Duration: <%= @movie.runtime %><br>
 Synapsis: <%= @movie.overview %>
