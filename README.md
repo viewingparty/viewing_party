@@ -63,7 +63,7 @@ After registering with our application, we allow users to:
 * Login securely to their account
 * Request, approve, and deny other users as their friends
 * Browse for any movie they want to watch
-** They can chose to search for movies by name, popularity, or genre!
+   * They can chose to search for movies by name, popularity, or genre!
 * Create a movie party and invite their friends to it!
 
 When searching for movies, users can use helpful information to guide their choices, such as:
