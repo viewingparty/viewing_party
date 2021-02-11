@@ -1,4 +1,4 @@
-const panels = document.querySelectorAll('.panel');
+var panels = document.querySelectorAll('.panel');
 
 function toggleOpen() {
   console.log('Hello');
