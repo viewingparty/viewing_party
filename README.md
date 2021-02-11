@@ -4,13 +4,13 @@ This was built from the base repo: [viewing party project](https://backend.turin
 
 ### About this App
 
-Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friend's. 
+Viewing party is an application in which users can explore movie options and create a viewing party event for the user and their friend's. 
 
 This project is deployed on:
 
-- [Heroku here](https://viewingfiesta.heroku.com)
+- [Heroku here](https://viewingfiesta.herokuapp.com)
 
-- [AWS here](https://www.example.com)
+<!-- [AWS here](https://www.example.com) -->
 
 ## Versions
 
@@ -32,17 +32,15 @@ This project is deployed on:
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#schema">Schema</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -57,37 +55,51 @@ This project is deployed on:
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This application allows a user to schedule, create, and invite their friends to movie nights!
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+After registering with our application, we allow users to:
+* Login securely to their account
+* Request, approve, and deny other users as their friends
+* Browse for any movie they want to watch
+   * They can chose to search for movies by name, popularity, or genre!
+* Create a movie party and invite their friends to it!
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+When searching for movies, users can use helpful information to guide their choices, such as:
+* The Movie's Theatrical Poster
+* Top Billed Cast
+* Notable Reviews
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+While users cannot currently watch the movies they select for their parties through this application, it is our hope that providing an easy and informative application brings their movie night experience one step closer to reality!
 
 ### Built With
 
 * [Ruby on Rails](https://rubyonrails.org/)
-* [Tailwinds](https://tailwindcss.com)
 * [RSpec](https://github.com/rspec/rspec-rails)
+* [Tailwinds](https://tailwindcss.com)
+* [Travis CI](https://travis-ci.com/)
+* [JavaScript](https://www.javascript.com)
+
+
+<!-- SCHEMA -->
+## Schema
+
+<object data="https://github.com/viewingparty/viewing_party/erd.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/viewingparty/viewing_party/erd.pdf">
+    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/erd.pdf>here</a></p>
+    </embed>
+</object>
+
+See the [open issues](https://github.com/viewingparty/viewing_party/issues) for a list of proposed features (and known issues).
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-1. Fork and Clone the repo
-2. Install gem packages: `bundle install`
-     -- For list of Gems see [here](https://github.com/viewingparty/viewing_party/blob/main/Gemfile)
-
-
 ### Installation
 
 1. Get a free API Key at [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api)
-2. Clone the repo
+2. Fork and Clone the repo
    ```
    git clone https://github.com/viewingparty/viewing_party.git
    ```
@@ -103,27 +115,9 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 5. Enter your API and ENV variables in `config/application.yml`
    ```
    movie_api: 'ENTER YOUR API'
-   search_limit: '10'
-   top_rated_limit: '50'
+   search_limit: '10'        #  less than or equal to 20
+   top_rated_limit: '50'     #  can be any size
    ```
-   -- search_limit <= 20, top_rated_limit can be any size
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/ribbansmax/viewing_party/issues) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
