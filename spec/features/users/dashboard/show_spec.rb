@@ -22,6 +22,17 @@ describe 'as an authenticated user' do
       expect(page).to have_link("Discover Movies")
     end
 
+    it 'can block you from seeing me' do
+      login_as(@user)
+      visit user_dashboard_path(@user2)
+
+      expect(current_path).to eq(root_path)
+
+      visit user_dashboard_path(@user)
+
+      expect(current_path).to eq(user_dashboard_path(@user))
+    end
+
     it 'has friends and parties' do
       @invite.update!(status: 1)
       login_as(@user)
@@ -31,26 +42,15 @@ describe 'as an authenticated user' do
         expect(page).to have_content(@party.duration)
         expect(page).to have_content(@party2.movie.title)
       end
-      within(".friends") do
-        expect(page).to have_content(@user2.email)
-      end
     end
 
     it 'can accept friends' do
       login_as(@user2)
       visit user_dashboard_path(@user2)
-
-      within(".friends") do
-        expect(page).to have_content("You currently have no friends.")
-        expect(page).to_not have_content(@user.email)
-      end
+      
       within("#invite-#{@invite.id}") do
         expect(page).to have_content(@user.email)
         click_on "Accept"
-      end
-      
-      within(".friends") do
-        expect(page).to have_content(@user.email)
       end
     end
 

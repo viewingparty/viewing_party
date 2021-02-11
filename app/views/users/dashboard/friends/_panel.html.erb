@@ -1,24 +1,29 @@
-<section class="pending_friends">
-  <header class="flex flex-col items-center">
-    <%= "Pending Friend Requests" %>
-  </header>
-  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
-    <%= render(partial: "users/dashboard/friends/pending_friends", collection: current_user.pending_friends, as: :pendfriend) || "No pending friend requests." %>
-  </article>
-</section>
-<section class="friends">
-  <header class="flex flex-col items-center">
-    <%= "Friends" %>
-  </header>
-  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+<div class="modal friend-modal">
+  <div class="modal-content">
+    <span class="close-btn close-friends-btn">&times;</span>
+    <header class="flex flex-col items-center">
+      <%= "Your Friends List" %>
+    </header>
     <%= render(partial: "users/dashboard/friends/friend", collection: current_user.friends) || "You currently have no friends." %>
-  </article>
-</section>
-<section class="friend_invites">
-  <header class="flex flex-col items-center">
-    <%= "Friend Invites" %>
-  </header>
-  <article class="flex flex-col items-center justify-end flex-wrap border-solid border-4 border-light-blue-500">
+  </div>
+</div>
+
+<div class="modal pending-modal">
+  <div class="modal-content">
+    <span class="close-btn close-pending-btn">&times;</span>
+    <header class="flex flex-col items-center">
+      <%= "Pending Friend Requests" %>
+    </header>
+    <%= render(partial: "users/dashboard/friends/pending_friends", collection: current_user.pending_friends, as: :pendfriend) || "No pending friend requests." %>
+  </div>
+</div>
+
+<div class="modal invites-modal">
+  <div class="modal-content">
+    <span class="close-btn close-invites-btn">&times;</span>
+    <header class="flex flex-col items-center">
+      <%= "Friend Invites" %>
+    </header>
     <%= render(partial: "users/dashboard/friends/friend_invite", collection: current_user.friend_invites, as: :frinvite) || "You currently have no friend invitations." %>
-  </article>
-</section>
+  </div>
+</div>

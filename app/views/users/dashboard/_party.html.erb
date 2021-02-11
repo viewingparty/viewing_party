@@ -1,5 +1,5 @@
-<article class="flex flex-col items-left justify-end flex-wrap border-solid border-4 border-light-blue-500">
-  <img src="https://image.tmdb.org/t/p/w200/<%= party.movie.poster %>" alt="No Image Found"/><br>
+<article class="flex flex-col items-center rounded-lg justify-end flex-wrap border-solid border-4 border-gold-500">
+  <img src="https://image.tmdb.org/t/p/w200/<%= party.movie.poster %>" alt="No Image Found" class="w-60" /><br>
   Movie: <%= link_to party.movie.title, movie_path(party.movie.api_id), class: "button bg-blue-200" %><br>
 
   Duration: <%=  party.duration %><br>
