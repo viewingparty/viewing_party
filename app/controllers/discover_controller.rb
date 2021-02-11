@@ -1,4 +1,4 @@
-class DiscoverController < ApplicationController
+class DiscoverController < Users::BaseController
   before_action :authenticate_user!
 
   def index

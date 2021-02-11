@@ -1,4 +1,4 @@
-class MoviesController < ApplicationController
+class MoviesController < Users::BaseController
   def index
     @genres = MovieFacade.genres
     @movies = MovieFacade.search_movies(params)
