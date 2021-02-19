@@ -38,7 +38,7 @@ class TheMovieDbApiService
 
     def find_movie(id)
       response = faraday.get("/3/movie/#{id}")
-      parse(response)
+      pazxrse(response)
     end
 
     def find_cast(id)
