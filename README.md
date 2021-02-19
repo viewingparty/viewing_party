@@ -17,10 +17,11 @@ This project is deployed on:
 - Ruby 2.5.3
 
 - Rails 5.2.4.3
-[![Build Status](https://travis-ci.org/viewingparty/viewing_party.svg?branch=main)](https://travis-ci.org/viewingparty/viewing_party)
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Build Status](https://travis-ci.org/viewingparty/viewing_party.svg?branch=main)](https://travis-ci.org/viewingparty/viewing_party)
 
 
 <!-- TABLE OF CONTENTS -->
