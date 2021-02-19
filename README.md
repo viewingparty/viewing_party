@@ -21,8 +21,7 @@ This project is deployed on:
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![Build Status](https://travis-ci.org/viewingparty/viewing_party.svg?branch=main)](https://travis-ci.org/viewingparty/viewing_party)
-
+[![Build Status](https://travis-ci.com/viewingparty/viewing_party.svg?branch=main)](https://travis-ci.com/viewingparty/viewing_party)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
