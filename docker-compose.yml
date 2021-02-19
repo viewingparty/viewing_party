@@ -1,0 +1,38 @@
+version: "3.0"
+volumes:
+  store:
+    driver: local
+  bundle:
+    driver: local
+services:
+  db:
+    image: postgres:13.1
+    ports:
+      - 5432:5432
+    volumes:
+      - store:/var/lib/postgresql/data
+    environment:
+      - 'POSTGRES_USERNAME=postgres'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_DB=myapp_development'
+  web:
+    container_name: myapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    image: viewing_party_web
+    restart: always
+    tty: true
+    stdin_open: true
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      - db
+    command: "bundle exec rails s -b 0.0.0.0"

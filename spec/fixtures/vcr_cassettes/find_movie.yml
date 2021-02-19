@@ -2,6 +2,162 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.themoviedb.org/3/movie/792897/credits?api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 19 Feb 2021 17:40:00 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=300
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 6c02603f677dd5669f8ab3b41062340f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - CjhZIZhD97iVu0CLvnxbDj5bDl0p1vvM3I7G1TEWXhfMBF2igcl75g==
+    body:
+      encoding: UTF-8
+      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
+        a valid key.","success":false}
+
+'
+  recorded_at: Fri, 19 Feb 2021 17:40:00 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/792897/reviews?api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 19 Feb 2021 17:40:01 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=300
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 c55bfc9d9a95cdee8e23989feddaa4b3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 8JT3ALZzs_nDfaDt9Hgw--FuaT1NzKf7nd5gJGL-1VHG7v0vZ9f9Ug==
+    body:
+      encoding: UTF-8
+      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
+        a valid key.","success":false}
+
+'
+  recorded_at: Fri, 19 Feb 2021 17:40:01 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/792897?api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 19 Feb 2021 17:40:02 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=300
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 b2e880ac67c1fba390623b9fc04bd63a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 1WlmOkSAuFdWZPUzSTT0Li7Nooa1bqADpacVxGQ47dQ0mmWpI8FN0g==
+    body:
+      encoding: UTF-8
+      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
+        a valid key.","success":false}
+
+'
+  recorded_at: Fri, 19 Feb 2021 17:40:02 GMT
+- request:
+    method: get
     uri: https://api.themoviedb.org/3/movie/792897?api_key=HIDE_MY_DATA
     body:
       encoding: US-ASCII
@@ -54,13 +210,23 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+<<<<<<< HEAD
+      - 1.1 1e5c934b70471a41d2b61ae8c4abeb79.cloudfront.net (CloudFront)
+=======
       - 1.1 3875d2e24f3fa436c06c298b167fa745.cloudfront.net (CloudFront)
+>>>>>>> main
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
+<<<<<<< HEAD
+      - 4idAmeTY9Vtg4DBP4j4KwT2RPOzY-F62C-F2YnmGHDj5VCbRMFOPuA==
+      Age:
+      - '5172'
+=======
       - zWTcFEweXcv9HkN-LJiFj9rHB7g6ifdaZhVg6blp1f5ffy63d1ktIQ==
       Age:
       - '13471'
+>>>>>>> main
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"}],"homepage":"","id":792897,"imdb_id":"tt0311785","original_language":"en","original_title":"CBS
@@ -68,7 +234,11 @@ http_interactions:
         office are stranded on the 50th floor when the power fails during the East
         Coast blackout of 1965.","popularity":0.621,"poster_path":"/dEa2v7C4rgXIn1yPmC0DMwe1uKg.jpg","production_companies":[{"id":148555,"logo_path":null,"name":"CBS","origin_country":""}],"production_countries":[],"release_date":"1969-05-07","revenue":0,"runtime":78,"spoken_languages":[],"status":"Released","tagline":"","title":"CBS
         Playhouse: Shadow Game","video":false,"vote_average":10.0,"vote_count":1}'
+<<<<<<< HEAD
+  recorded_at: Fri, 19 Feb 2021 19:06:50 GMT
+=======
   recorded_at: Fri, 19 Feb 2021 21:25:09 GMT
+>>>>>>> main
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/792897/credits?api_key=HIDE_MY_DATA
@@ -123,13 +293,23 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+<<<<<<< HEAD
+      - 1.1 9c7e5857d78c5dc89042979317de5843.cloudfront.net (CloudFront)
+=======
       - 1.1 33b4a855787c78f8c6d1716e9cbf8099.cloudfront.net (CloudFront)
+>>>>>>> main
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
+<<<<<<< HEAD
+      - 9RaANlzPsYRuHDsuJb4U6NVllz9brtFYMm4CV2M4ceFhQhSJSXIasw==
+      Age:
+      - '5171'
+=======
       - OhRSEcUaAnM0t8cEgJ7Z5Wk6s6xudjZFp5nTBoLanYyZsQo2ajE69w==
       Age:
       - '13470'
+>>>>>>> main
     body:
       encoding: ASCII-8BIT
       string: '{"id":792897,"cast":[{"adult":false,"gender":2,"id":83908,"known_for_department":"Acting","name":"Daniel
@@ -150,7 +330,11 @@ http_interactions:
         Mandel","original_name":"Loring Mandel","popularity":0.6,"profile_path":null,"credit_id":"6019a590a76ac5003f537585","department":"Writing","job":"Writer"},{"adult":false,"gender":1,"id":1186923,"known_for_department":"Art","name":"Jan
         Scott","original_name":"Jan Scott","popularity":0.84,"profile_path":null,"credit_id":"6019a5a4bc86570045ba6b34","department":"Art","job":"Art
         Direction"}]}'
+<<<<<<< HEAD
+  recorded_at: Fri, 19 Feb 2021 19:06:50 GMT
+=======
   recorded_at: Fri, 19 Feb 2021 21:25:09 GMT
+>>>>>>> main
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/792897/reviews?api_key=HIDE_MY_DATA
@@ -201,10 +385,23 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+<<<<<<< HEAD
+      - 1.1 23241b9c368643949e3bb1a1ba4e97c3.cloudfront.net (CloudFront)
+=======
       - 1.1 32c386750218a25bee899f5c2a6d5b33.cloudfront.net (CloudFront)
+>>>>>>> main
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
+<<<<<<< HEAD
+      - UjcUFSkVzQOo_HwkzLU9N861B_tRq_JzB8mSJlKKI3grJNRz87H-Xg==
+      Age:
+      - '5171'
+    body:
+      encoding: UTF-8
+      string: '{"id":792897,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Fri, 19 Feb 2021 19:06:50 GMT
+=======
       - oM299NYpNm4OrDQeLTjwbZC-jLqkGMPGSaAXVE-W5Rv7T0XjLttSzQ==
       Age:
       - '13470'
@@ -212,6 +409,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":792897,"page":1,"results":[],"total_pages":0,"total_results":0}'
   recorded_at: Fri, 19 Feb 2021 21:25:09 GMT
+>>>>>>> main
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/792897?api_key=HIDE_MY_DATA
@@ -266,13 +464,23 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+<<<<<<< HEAD
+      - 1.1 9c7e5857d78c5dc89042979317de5843.cloudfront.net (CloudFront)
+=======
       - 1.1 f846651d60359ebb3a1181bfa98b2e85.cloudfront.net (CloudFront)
+>>>>>>> main
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
+<<<<<<< HEAD
+      - TvmLoaFlJyJXBseF15Uk_q4r5PVmUElqMSE5UAkYRYYDfuCdVHzoDQ==
+      Age:
+      - '5172'
+=======
       - mVPIe9XLR15k4_GZBcasKcC8pw5z4O47Wo7UK2KBW8onkPCjzHzzsw==
       Age:
       - '13471'
+>>>>>>> main
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"}],"homepage":"","id":792897,"imdb_id":"tt0311785","original_language":"en","original_title":"CBS
@@ -280,7 +488,11 @@ http_interactions:
         office are stranded on the 50th floor when the power fails during the East
         Coast blackout of 1965.","popularity":0.621,"poster_path":"/dEa2v7C4rgXIn1yPmC0DMwe1uKg.jpg","production_companies":[{"id":148555,"logo_path":null,"name":"CBS","origin_country":""}],"production_countries":[],"release_date":"1969-05-07","revenue":0,"runtime":78,"spoken_languages":[],"status":"Released","tagline":"","title":"CBS
         Playhouse: Shadow Game","video":false,"vote_average":10.0,"vote_count":1}'
+<<<<<<< HEAD
+  recorded_at: Fri, 19 Feb 2021 19:06:50 GMT
+=======
   recorded_at: Fri, 19 Feb 2021 21:25:09 GMT
+>>>>>>> main
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/792897/credits?api_key=HIDE_MY_DATA
@@ -335,13 +547,23 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+<<<<<<< HEAD
+      - 1.1 2c861897aa9389c1f47299b6fea5b59d.cloudfront.net (CloudFront)
+=======
       - 1.1 5c45cccf7332e713185947ec3f895f62.cloudfront.net (CloudFront)
+>>>>>>> main
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
+<<<<<<< HEAD
+      - sLKx0lIIY1OuLv6PItujfjpUHDbpmrAbl2dAJ_FsmnHVuDCck-vldQ==
+      Age:
+      - '5171'
+=======
       - uyhDZ2HzbVpiQ_07Zyvp6lY3n167SKAp31AjRI06H60z_wHvBx9CBw==
       Age:
       - '13470'
+>>>>>>> main
     body:
       encoding: ASCII-8BIT
       string: '{"id":792897,"cast":[{"adult":false,"gender":2,"id":83908,"known_for_department":"Acting","name":"Daniel
@@ -362,7 +584,11 @@ http_interactions:
         Mandel","original_name":"Loring Mandel","popularity":0.6,"profile_path":null,"credit_id":"6019a590a76ac5003f537585","department":"Writing","job":"Writer"},{"adult":false,"gender":1,"id":1186923,"known_for_department":"Art","name":"Jan
         Scott","original_name":"Jan Scott","popularity":0.84,"profile_path":null,"credit_id":"6019a5a4bc86570045ba6b34","department":"Art","job":"Art
         Direction"}]}'
+<<<<<<< HEAD
+  recorded_at: Fri, 19 Feb 2021 19:06:50 GMT
+=======
   recorded_at: Fri, 19 Feb 2021 21:25:09 GMT
+>>>>>>> main
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/792897/reviews?api_key=HIDE_MY_DATA
@@ -413,10 +639,23 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+<<<<<<< HEAD
+      - 1.1 d29afc70fc2fdadee440493854714224.cloudfront.net (CloudFront)
+=======
       - 1.1 93debd9afa16324098afaaa5f75b1998.cloudfront.net (CloudFront)
+>>>>>>> main
       X-Amz-Cf-Pop:
-      - PHX50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
+<<<<<<< HEAD
+      - jyMAdDSKP56KZJGZx-EmH-JNy19lPxad5GEfWHXkkSn5HgL_dzarUQ==
+      Age:
+      - '5172'
+    body:
+      encoding: UTF-8
+      string: '{"id":792897,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Fri, 19 Feb 2021 19:06:51 GMT
+=======
       - 30ncB9ZMVym16symY82pkwP5ucmLYdlve6CRxDNmEVNlze9jEjl_IA==
       Age:
       - '13470'
@@ -424,4 +663,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":792897,"page":1,"results":[],"total_pages":0,"total_results":0}'
   recorded_at: Fri, 19 Feb 2021 21:25:09 GMT
+>>>>>>> main
 recorded_with: VCR 6.0.0
