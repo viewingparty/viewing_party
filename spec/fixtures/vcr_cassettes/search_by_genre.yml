@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/discover/movie?api_key=HIDE_MY_DATA&sort_by=vote_average.desc&with_genres=Action
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Date:
+      - Fri, 19 Feb 2021 21:25:12 GMT
+      Cache-Control:
+      - public, max-age=600
+      Etag:
+      - a8d277d2d95f2ea20f792a48c43093dc
+      X-Cache:
+      - RefreshHit from cloudfront
+      Via:
+      - 1.1 52ea1a497a9f9fd068ca36c214ddf455.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - PHX50-C1
+      X-Amz-Cf-Id:
+      - dU9cJhtO3F_1qJ8ZFQrJ_9qVHz_u2_ei_X2_r5yl_mjpa__bUAuaRA==
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Fri, 19 Feb 2021 21:25:12 GMT
+recorded_with: VCR 6.0.0
