@@ -27,12 +27,5 @@ describe 'as an authenticated user' do
           expect(page).to have_button("Find Movies")
         end
       end
-      it 'can search by genre' do
-        VCR.use_cassette("genre_index") do
-          visit movies_path(genre: 28)
-
-          expect(page).to have_content("The Nightmare Before Christmas")
-        end
-      end
     end
 end
