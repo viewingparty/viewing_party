@@ -1,0 +1,33 @@
+version: "3.9"
+volumes:
+  store:
+    driver: local
+  bundle:
+    driver: local
+
+services:
+  db:
+    image: postgres:13.1
+    ports:
+      - 5432:5432
+    volumes:
+      - store:/var/lib/postgresql/data
+    environment:
+      - 'POSTGRES_USERNAME=postgres'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_DB=myapp_development'
+  web:
+    container_name: myapp
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      - db
