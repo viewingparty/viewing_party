@@ -116,7 +116,31 @@ See the [open issues](https://github.com/viewingparty/viewing_party/issues) for 
    search_limit: '10'        #  less than or equal to 20
    top_rated_limit: '50'     #  can be any size
    ```
+   
+ ### Docker
+Several helper scripts have been created. 
 
+Once your container is up and running you have access to the following.
+
+This command will setup and test your container. It will exit gracefully if docker is inproperly installed
+```
+/bin/docker/setup
+```
+
+This command allows you to run various rails commands within your container
+```
+bin/docker/rails
+```
+
+This command will allow you to run rake commands in the container, if not given a command it will default to test
+```
+bin/docker/rake
+```
+
+This command will run Rspec in your container
+```
+bin/docker/rpsec
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
