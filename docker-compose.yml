@@ -1,0 +1,76 @@
+version: '3'
+services:
+  rails:
+    tty: true
+    stdin_open: true
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+    - "REDIS_URL=redis://redis:6379/1"
+    - "QUEUE_URL=redis://redis:6379/1"
+    - "DB_HOST=database"
+    - "DB_USERNAME=postgres"
+    - "DB_PASSWORD=password"
+    - "DB_PORT=5432"
+    - "AWS_ENDPOINT=http://minio:9000"
+    - "MINIO_URL=minio"
+    - "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
+    - "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
+    - "AWS_BUCKET=${AWS_BUCKET}"
+    depends_on:
+      - database
+      - redis
+      - minio
+    command: "bundle exec rails s -b 0.0.0.0"
+  database:
+    image: postgres:13.1
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      - "POSTGRES_PASSWORD=password"
+      - "POSTGRES_DB=biteslice_development"
+    ports:
+      - 5432
+  minio:
+    image: minio/minio:latest
+    restart: always
+    container_name: minio
+    environment:
+      MINIO_ACCESS_KEY: ${AWS_ACCESS_KEY_ID}
+      MINIO_SECRET_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      VIRTUAL_HOST: "minio"
+    volumes:
+      - ./tmp/minio-data:/data
+    command: server /data
+    ports:
+      - 9000:9000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+  redis:
+    image: redis
+    volumes:
+      - redis
+    ports:
+      - 6379:6379
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
+volumes:
+  postgres:
+    driver: local
+  redis:
+    driver: local

@@ -82,4 +82,56 @@ http_interactions:
         Scott","original_name":"Jan Scott","popularity":0.6,"profile_path":null,"credit_id":"6019a5a4bc86570045ba6b34","department":"Art","job":"Art
         Direction"}]}'
   recorded_at: Fri, 05 Feb 2021 17:48:59 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/792897/credits?api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 19 Feb 2021 17:40:02 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=300
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 6c02603f677dd5669f8ab3b41062340f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - qlWsNP8PwVF6ZQHlRMTYMnd-l11mjhREiJsmX6aUWKx_DzQKaDqTpQ==
+    body:
+      encoding: UTF-8
+      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
+        a valid key.","success":false}
+
+'
+  recorded_at: Fri, 19 Feb 2021 17:40:02 GMT
 recorded_with: VCR 6.0.0
