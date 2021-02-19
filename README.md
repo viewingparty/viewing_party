@@ -18,7 +18,6 @@ This project is deployed on:
 
 - Rails 5.2.4.3
 
-[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -140,6 +139,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
+[Alex Osborne](https://github.com/AlexanderOsborne)
+[James Fox-Collis](https://github.com/jlfoxcollis)
+[Max Ribbans](https://github.com/ribbansmax)
 
 Project Link: [https://github.com/viewingparty/viewing_party](https://github.com/ribbansmax/viewing_party)
 

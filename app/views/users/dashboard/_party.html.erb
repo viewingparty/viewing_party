@@ -1,7 +1,7 @@
 <article class="flex flex-col items-center rounded-lg justify-end flex-wrap border-solid border-4 border-gold-500">
   <img src="https://image.tmdb.org/t/p/w200/<%= party.movie.poster %>" alt="No Image Found" class="w-60" /><br>
-  Movie: <%= link_to party.movie.title, movie_path(party.movie.api_id), class: "button bg-blue-200" %><br>
-
+  Movie: <%= link_to party.movie.title, movie_path(party.movie.api_id), class: "button rounded-lg py-1 md:py-2 px-5 bg-blue-200 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white transition duration-150-ease-in-out" %><br>
+  Host: <%= party.user.email %><br>
   Duration: <%=  party.duration %><br>
   Date: <%=  party.time %><br>
 </article>
