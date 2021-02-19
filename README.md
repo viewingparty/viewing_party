@@ -53,8 +53,6 @@ This project is deployed on:
 <!-- ABOUT THE PROJECT -->
 ## About The Application
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This application allows a user to schedule, create, and invite their friends to movie nights!
 
 After registering with our application, we allow users to:
@@ -83,9 +81,9 @@ While users cannot currently watch the movies they select for their parties thro
 <!-- SCHEMA -->
 ## Schema
 
-<object data="https://github.com/viewingparty/viewing_party/erd.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/viewingparty/viewing_party/erd.pdf">
-    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/erd.pdf>here</a></p>
+<object data="./erd.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="./erd.pdf">
+    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/blob/main/erd.pdf>here</a></p>
     </embed>
 </object>
 
