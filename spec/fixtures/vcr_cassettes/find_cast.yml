@@ -2,58 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/movie/792897/credits?api_key
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.3.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Fri, 19 Feb 2021 17:40:02 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=300
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 6c02603f677dd5669f8ab3b41062340f.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - DEN50-C2
-      X-Amz-Cf-Id:
-      - qlWsNP8PwVF6ZQHlRMTYMnd-l11mjhREiJsmX6aUWKx_DzQKaDqTpQ==
-    body:
-      encoding: UTF-8
-      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
-        a valid key.","success":false}
-
-'
-  recorded_at: Fri, 19 Feb 2021 17:40:02 GMT
-- request:
-    method: get
     uri: https://api.themoviedb.org/3/movie/792897/credits?api_key=HIDE_MY_DATA
     body:
       encoding: US-ASCII
@@ -106,23 +54,13 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-<<<<<<< HEAD
-      - 1.1 e7ff4a714a3b1f464db9c76ee954a565.cloudfront.net (CloudFront)
-=======
-      - 1.1 553a6bd9d1f05f944fd084b3c51cf2ec.cloudfront.net (CloudFront)
->>>>>>> main
+      - 1.1 e1043a08e84371a81665b5d6a84120d1.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - DEN50-C2
+      - PHX50-C1
       X-Amz-Cf-Id:
-<<<<<<< HEAD
-      - eUV_UTBLPQE_dnPyB-VBq-siPa5P9EsMZe02zUBwJ4_gCrhFG_ruNw==
+      - GF3MSJyXv8dLMjSrO0IVx3uWN777pZqhD90uGPeIl7o1H4hs1_k2Dg==
       Age:
-      - '5176'
-=======
-      - qEOKDo7Yum4KZNvo0zqAUm4USlU2UKQBTwgbNQ_8RavMa82nx3UqrQ==
-      Age:
-      - '13474'
->>>>>>> main
+      - '14793'
     body:
       encoding: ASCII-8BIT
       string: '{"id":792897,"cast":[{"adult":false,"gender":2,"id":83908,"known_for_department":"Acting","name":"Daniel
@@ -143,9 +81,5 @@ http_interactions:
         Mandel","original_name":"Loring Mandel","popularity":0.6,"profile_path":null,"credit_id":"6019a590a76ac5003f537585","department":"Writing","job":"Writer"},{"adult":false,"gender":1,"id":1186923,"known_for_department":"Art","name":"Jan
         Scott","original_name":"Jan Scott","popularity":0.84,"profile_path":null,"credit_id":"6019a5a4bc86570045ba6b34","department":"Art","job":"Art
         Direction"}]}'
-<<<<<<< HEAD
-  recorded_at: Fri, 19 Feb 2021 19:06:55 GMT
-=======
-  recorded_at: Fri, 19 Feb 2021 21:25:13 GMT
->>>>>>> main
+  recorded_at: Fri, 19 Feb 2021 21:47:12 GMT
 recorded_with: VCR 6.0.0
