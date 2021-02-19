@@ -120,12 +120,13 @@ See the [open issues](https://github.com/viewingparty/viewing_party/issues) for 
  ### Docker
 Several helper scripts have been created. 
 
-Once your container is up and running you have access to the following.
 
-This command will setup and test your container. It will exit gracefully if docker is inproperly installed
+This command will setup your container. It will exit gracefully if docker is inproperly installed
 ```
 /bin/docker/setup
 ```
+
+Once your container is up and running you have access to the following.
 
 This command allows you to run various rails commands within your container
 ```
