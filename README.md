@@ -81,11 +81,8 @@ While users cannot currently watch the movies they select for their parties thro
 <!-- SCHEMA -->
 ## Schema
 
-<object data="./erd.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="./erd.pdf">
-    <p> Your browser does not support pdfs. Please find it <a href=https://github.com/viewingparty/viewing_party/blob/main/erd.pdf>here</a></p>
-    </embed>
-</object>
+### Schema
+![Screen Shot 2021-03-04 at 9 24 16 PM](https://user-images.githubusercontent.com/64919819/110067066-21913a00-7d30-11eb-8d2e-cfc26aa93a22.png)
 
 See the [open issues](https://github.com/viewingparty/viewing_party/issues) for a list of proposed features (and known issues).
 
